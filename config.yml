@@ -580,6 +580,7 @@ production_factories:
         amount: 160
     recipes:
       - Diamond_Boots
+      - Diamond_Prot_Five_Boots
     repair_multiple: 16
     repair_inputs:
       Diamond:
@@ -615,6 +616,7 @@ production_factories:
         amount: 320
     recipes:
       - Diamond_Chestplate
+      - Diamond_Prot_Five_Chestplate
     repair_multiple: 32
     repair_inputs:
       Diamond:
@@ -631,6 +633,7 @@ production_factories:
         amount: 192
     recipes:
       - Diamond_Helmet
+      - Diamond_Prot_Five_Helmet
     repair_multiple: 20
     repair_inputs:
       Diamond:
@@ -663,6 +666,7 @@ production_factories:
         amount: 256
     recipes:
       - Diamond_Leggings
+      - Diamond_Prot_Five_Leggings
     repair_multiple: 26
     repair_inputs:
       Diamond:
@@ -7557,3 +7561,83 @@ production_recipes:
        Eye of Ender:
          material: EYE_OF_ENDER
          amount: 256
+  Diamond_Prot_Five_Boots:
+    name: Diamond Protection Five Boots
+    production_time: 360
+    inputs:
+      Emerald Ore:
+         material: EMERALD_ORE
+         amount: 6
+    outputs:
+      Diamond Boots:
+         material: DIAMOND_BOOTS
+         amount: 1
+         display_name: Diamond Protection Five Boots
+         lore: Diamond Protection Five Boots
+    enchantments:
+      Protection:
+        type: PROTECTION_ENVIRONMENTAL
+        level: 5
+      Unbreaking:
+        type: DURABILITY
+        level: 50
+  Diamond_Prot_Five_Chestplate:
+    name: Diamond Protection Five Chestplate
+    production_time: 360
+    inputs:
+      Emerald Ore:
+         material: EMERALD_ORE
+         amount: 6
+    outputs:
+      Diamond Chestplate:
+         material: DIAMOND_CHESTPLATE
+         amount: 1
+         display_name: Diamond Protection Five Chestplate
+         lore: Diamond Protection Five Chestplate
+    enchantments:
+      Protection:
+        type: PROTECTION_ENVIRONMENTAL
+        level: 5
+      Unbreaking:
+        type: DURABILITY
+        level: 50
+  Diamond_Prot_Five_Helmet:
+    name: Diamond Protection Five Helmet
+    production_time: 360
+    inputs:
+      Emerald Ore:
+         material: EMERALD_ORE
+         amount: 6
+    outputs:
+      Diamond Helmet:
+         material: DIAMOND_HELMET
+         amount: 1
+         display_name: Diamond Protection Five Helmet
+         lore: Diamond Protection Five Helmet
+    enchantments:
+      Protection:
+        type: PROTECTION_ENVIRONMENTAL
+        level: 5
+      Unbreaking:
+        type: DURABILITY
+        level: 50
+  Diamond_Prot_Five_Leggings:
+    name: Diamond Protection Five Leggings
+    production_time: 360
+    inputs:
+      Emerald Ore:
+         material: EMERALD_ORE
+         amount: 6
+    outputs:
+      Diamond Leggings:
+         material: DIAMOND_LEGGINGS
+         amount: 1
+         display_name: Diamond Protection Five Leggings
+         lore: Diamond Protection Five Leggings
+    enchantments:
+      Protection:
+        type: PROTECTION_ENVIRONMENTAL
+        level: 5
+      Unbreaking:
+        type: DURABILITY
+        level: 50
