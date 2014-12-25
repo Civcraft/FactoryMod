@@ -599,6 +599,7 @@ production_factories:
       - Diamond_XP_Bottle_1
       - Diamond_XP_Bottle_2
       - Diamond_XP_Bottle_3
+      - Golden_Apples
     repair_multiple: 5
     repair_inputs:
       Diamond:
@@ -4178,6 +4179,19 @@ production_recipes:
       Exp Bottle:
         material: EXP_BOTTLE
         amount: 128
+  Golden_Apples:
+    name: Golden Apples
+    inputs:
+      Shards of a Diamond:
+        material: GRAVEL
+        amount: 1
+        display_name: Shards of a Diamond
+        lore: Item used to create the Nether Compressor 
+    outputs:
+      Opples:
+        material: GOLDEN_APPLE
+        amount: 64
+        durability: 1
   Dye_White_Wool_Gray:
     name: Dye White Wool Gray
     inputs:
