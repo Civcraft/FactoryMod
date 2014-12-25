@@ -7486,19 +7486,19 @@ production_recipes:
     inputs:
       Emerald Block:
         material: EMERALD_BLOCK
-        amount: 24
+        amount: 36
       Diamond Block:
         material: DIAMOND_BLOCK
         amount: 24
       Gold Ore:
         material: GOLD_ORE
-        amount: 8
+        amount: 12
       Slime Ball:
         material: SLIME_BALL
-        amount: 8
+        amount: 16
       Anvil:
         material: ANVIL
-        amount: 8
+        amount: 12
     outputs:
       Aspect of Terra:
         material: DIAMOND
@@ -7517,7 +7517,7 @@ production_recipes:
         amount: 256
       Endstone:
         material: ENDER_STONE
-        amount: 1024
+        amount: 768
     outputs:
       Aspect of End:
         material: FLINT
@@ -7530,13 +7530,13 @@ production_recipes:
     inputs:
       Ghast Tears:
         material: GHAST_TEAR
-        amount: 16
+        amount: 24
       Quartz Ore:
         material: QUARTZ_ORE
-        amount: 512
+        amount: 768
       Glowstone:
         material: GLOWSTONE
-        amount: 512
+        amount: 768
     outputs:
       Aspect of Nether:
         material: MAGMA_CREAM
