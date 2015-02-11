@@ -380,8 +380,11 @@ public class NetherFactoryManager implements Manager
 	
 	public double getScalingFactor(Location location)
 	{
-		double scalingFactor = 1;
 		NetherFactoryProperties properties = plugin.getNetherFactoryProperties();
+        
+		double scalingFactor = 1;
+		double lastDistance = properties.getCostScalingRadius();
+        
 		for (NetherFactory factory : netherFactorys)
 		{
 			Location factoryLoc = factory.getCenterLocation();
@@ -395,14 +398,15 @@ public class NetherFactoryManager implements Manager
 				if ((location.getBlockZ()-factoryLoc.getBlockZ()) < properties.getScalingRadius() || (location.getBlockZ()-factoryLoc.getBlockZ()) > -(properties.getScalingRadius()))
 				{
 					double distance = location.distance(factoryLoc);
-					if (distance <= properties.getScalingRadius())
+					if (distance <= lastDistance)
 					{
-						scalingFactor = scalingFactor * Math.exp(1/(distance/properties.getCostScalingRadius()));
+						scalingFactor = (properties.getCostScalingRadius() * properties.getCostScalingRadius()) / (distance * distance);
+						lastDistance = distance;
 					}
 				}
 			}
 		}
 		return scalingFactor;
-	}		
+	}
 
 }
