@@ -4728,6 +4728,22 @@ production_recipes:
       Dispensers:
         material: DISPENSER
         amount: 64
+  Produce_Dispensers:
+    name: Produce Dispensers
+    inputs:
+      Cobblestone:
+        material: COBBLESTONE
+        amount: 320
+      Redstone:
+        material: REDSTONE
+        amount: 32
+      Chest:
+        material: CHEST
+        amount: 4
+    outputs:
+      Dispensers:
+        material: DISPENSER
+        amount: 64
   Produce_Redstone_lamps:
     name: Produce Redstone lamps
     inputs:
