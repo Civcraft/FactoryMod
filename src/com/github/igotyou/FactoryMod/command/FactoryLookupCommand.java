@@ -48,7 +48,7 @@ public class FactoryLookupCommand extends PlayerCommand {
 		int factoryY = nearestNF.getBlockY();
 		int factoryZ = nearestNF.getBlockZ();
 		double distance = nearestNF.distance(player.getLocation());
-		player.sendMessage(ChatColor.GREEN + "The nearest Nether Factory is located at [" + factoryX + ", " + factoryY + ", " + factoryZ + "] exactly " + distance + "meters away!");
+		player.sendMessage(ChatColor.GREEN + "The nearest Nether Factory is located at [" + factoryX + ", " + factoryY + ", " + factoryZ + "] which is " + (int) distance + "meters away!");
 		return true;
 	}
 
