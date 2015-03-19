@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.ItemStack;
@@ -22,6 +24,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import com.github.igotyou.FactoryMod.FactoryObject.FactoryType;
+import com.github.igotyou.FactoryMod.command.CommandHandler;
 import com.github.igotyou.FactoryMod.interfaces.Properties;
 import com.github.igotyou.FactoryMod.listeners.FactoryModListener;
 import com.github.igotyou.FactoryMod.listeners.NoteStackListener;
@@ -80,6 +83,8 @@ public class FactoryModPlugin extends JavaPlugin
 	public static boolean REDSTONE_START_ENABLED;
 	public static boolean LEVER_OUTPUT_ENABLED;
 	
+	private static CommandHandler cHandler;
+	
 	public void onEnable()
 	{
 		plugin = this;
@@ -89,12 +94,23 @@ public class FactoryModPlugin extends JavaPlugin
 		manager = new FactoryModManager(this);
 		//register the events(this should be moved...)
 		registerEvents();
+		registerCommands();
 	}
 	
 	public void onDisable()
 	{
 		//call the disable method, this will save the data etc.
 		manager.onDisable();
+	}
+	
+	@Override
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+		return cHandler.execute(sender, cmd, args);
+	}
+	
+	public void registerCommands() {
+		cHandler = new CommandHandler();
+		cHandler.registerCommands();
 	}
 	
 	public void registerEvents()

@@ -16,6 +16,7 @@ import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
 import vg.civcraft.mc.citadel.Citadel;
@@ -373,6 +374,18 @@ public class NetherFactoryManager implements Manager
 		
 		netherFactorys.remove(netherFactory);
 		
+	}
+	
+	public Location getClosestFactoryToPlayer(Player p) {
+		Location loc = null;
+		double distance = 999999999;
+		for(NetherFactory nf : netherFactorys) {
+			if(nf.getCenterLocation().distance(p.getLocation()) < distance) {
+				loc = nf.getCenterLocation();
+				distance = nf.getCenterLocation().distance(p.getLocation());
+			}
+		}
+		return loc;
 	}
 	
 	public void updateRepair(long time)
