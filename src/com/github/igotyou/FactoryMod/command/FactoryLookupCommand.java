@@ -42,6 +42,7 @@ public class FactoryLookupCommand extends PlayerCommand {
 		Location nearestNF = nfMan.getClosestFactoryToPlayer(player);
 		if(nearestNF == null) {
 			player.sendMessage(ChatColor.RED + "There are currently no Nether Factories in existence!");
+			return true;
 		}
 		int factoryX = nearestNF.getBlockX();
 		int factoryY = nearestNF.getBlockY();
