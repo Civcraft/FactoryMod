@@ -4163,7 +4163,7 @@ production_recipes:
       Ink:
         material: 'INK_SACK'
         durability: 0
-        amount: 16
+        amount: 2
     outputs:
       Exp Bottle:
         material: EXP_BOTTLE
