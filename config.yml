@@ -7425,7 +7425,7 @@ production_recipes:
     outputs:
       Bastion:
         material: SPONGE
-        amount: 32
+        amount: 16
         display_name: Bastion
   Sequencing_Sunflower:
     name: Sequencing Sunflower
