@@ -2907,6 +2907,7 @@ production_factories:
       - Wood_XP_0
       - Wood_XP_1
       - Wood_XP_2
+      - Wood_XP_3
     repair_multiple: 103
     repair_inputs:
       Stick:
@@ -10094,6 +10095,23 @@ production_recipes:
         amount: 640
       Wheat:
         material: SOUL_SAND
+        amount: 640
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 36
+    outputs:
+      Emerald:
+        material: EMERALD
+        amount: 4
+  Wood_XP_3:
+    name: Wood XP Factory 4
+    production_time: 80
+    inputs:
+      Glowstone:
+        material: GLOWSTONE
+        amount: 16
+      Potatoes:
+        material: POTATO_ITEM
         amount: 640
       Glass Bottle:
         material: GLASS_BOTTLE
