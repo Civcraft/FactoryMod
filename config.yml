@@ -10052,15 +10052,15 @@ production_recipes:
         level: 2
         probability: 0.01
   Wood_XP_0:
-    name: Stone XP Factory 1
+    name: Wood XP Factory 1
     production_time: 80
     inputs:
       Ender Pearls:
         material: ENDER_PEARL
         amount: 8
-      Wheat:
-        material: WHEAT
-        amount: 256
+      Hay Bales:
+        material: HAY_BLOCK
+        amount: 32
       Glass Bottle:
         material: GLASS_BOTTLE
         amount: 36
@@ -10069,7 +10069,7 @@ production_recipes:
         material: EMERALD
         amount: 4
   Wood_XP_1:
-    name: Stone XP Factory 2
+    name: Wood XP Factory 2
     production_time: 80
     inputs:
       Endstone:
@@ -10086,7 +10086,7 @@ production_recipes:
         material: EMERALD
         amount: 4
   Wood_XP_2:
-    name: Stone XP Factory 3
+    name: Wood XP Factory 3
     production_time: 80
     inputs:
       Carrot:
@@ -10094,7 +10094,7 @@ production_recipes:
         amount: 640
       Wheat:
         material: SOUL_SAND
-        amount: 1408
+        amount: 640
       Glass Bottle:
         material: GLASS_BOTTLE
         amount: 36
