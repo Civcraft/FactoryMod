@@ -10142,7 +10142,7 @@ production_recipes:
       Carrot:
         material: CARROT
         amount: 640
-      Wheat:
+      Soul Sand:
         material: SOUL_SAND
         amount: 1408
     outputs:
