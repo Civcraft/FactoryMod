@@ -108,29 +108,26 @@ repair_factory:
   production_time: 20
   costs:
     construction:
-      Gold Blocks:
-        material: 'GOLD_BLOCK'
-        amount: 32
-      Coal_Blocks:
-        material: 'COAL_BLOCK'
-        amount: 512
-      Lapis Block:
-        material: 'LAPIS_BLOCK'
+      Coal Ore:
+        material: 'COAL_ORE'
+        amount: 192
+      Iron Ore:
+        material: 'IRON_ORE'
+        amount: 8
+      Redstone Ore:
+        material: 'REDSTONE_ORE'
+        amount: 8
+      Gold Ore:
+        material: 'GOLD_ORE'
         amount: 16
     repair:
-      Gold Blocks:
-        material: 'GOLD_BLOCK'
-        amount: 3
-      Coal_Blocks:
-        material: 'COAL_BLOCK'
-        amount: 51
-      Lapis Block:
-        material: 'LAPIS_BLOCK'
-        amount: 1
-    recipe:
-      Coal Blocks:
-        material: 'COAL_BLOCK'
+      Coal Ore:
+        material: 'COAL_ORE'
         amount: 32
+    recipe:
+      Coal Ore:
+        material: 'COAL_ORE'
+        amount: 64
 copy_defaults: false
 general:
   central_block: WORKBENCH
@@ -692,9 +689,9 @@ production_factories:
         material: COAL
         durability: 1
     inputs:  
-      Emeralds:
-        material: EMERALD
-        amount: 320   
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 192   
       Diamonds:
         material: DIAMOND
         amount: 128   
@@ -730,27 +727,33 @@ production_factories:
         material: EMERALD_BLOCK
         amount: 64   
     recipes:
+      - Nether_Craft_Crate_of_Acacia_Sapling
       - Nether_Craft_Crate_of_Baked_Potatoes
+      - Nether_Craft_Crate_of_Birch_Sapling
       - Nether_Craft_Crate_of_Bread
       - Nether_Craft_Crate_of_Brown_Mushrooms
+      - Nether_Craft_Crate_of_Cacti
       - Nether_Craft_Crate_of_Carrots
       - Nether_Craft_Crate_of_Cocoa
       - Nether_Craft_Crate_of_Cookies
+      - Nether_Craft_Crate_of_Dark_Oak Sapling
       - Nether_Craft_Crate_of_Fish
       - Nether_Craft_Crate_of_Glass_Bottles
       - Nether_Craft_Crate_of_Grass
+      - Nether_Craft_Crate_of_Grass_Blocks
+      - Nether_Craft_Crate_of_Jungle_Sapling
       - Nether_Craft_Crate_of_Melons
       - Nether_Craft_Crate_of_Nether_Warts
+      - Nether_Craft_Crate_of_Oak_Sapling
       - Nether_Craft_Crate_of_Pumpkins
       - Nether_Craft_Crate_of_Red_Mushrooms
       - Nether_Craft_Crate_of_Red_Rose
-      - Nether_Craft_Crate_of_Rotten_Flesh
-      - Nether_Craft_Crate_of_Sugar
+      - Nether_Craft_Crate_of_Salmon
+      - Nether_Craft_Crate_of_Spruce_Sapling
       - Nether_Craft_Crate_of_Sugar_Cane
       - Nether_Craft_Crate_of_Vine
       - Nether_Craft_Crate_of_Wheat
       - Nether_Craft_Crate_of_Yellow_Flower
-      - Nether_Craft_Crate_of_Cacti
     repair_multiple: 2
     repair_inputs:
       Iron Block:
@@ -773,27 +776,33 @@ production_factories:
         material: EMERALD_BLOCK
         amount: 128   
     recipes:
+      - Nether_Decraft_Crate_of_Acacia_Sapling
       - Nether_Decraft_Crate_of_Baked_Potatoes
+      - Nether_Decraft_Crate_of_Birch_Sapling
       - Nether_Decraft_Crate_of_Bread
       - Nether_Decraft_Crate_of_Brown_Mushrooms
+      - Nether_Decraft_Crate_of_Cacti
       - Nether_Decraft_Crate_of_Carrots
       - Nether_Decraft_Crate_of_Cocoa
       - Nether_Decraft_Crate_of_Cookies
+      - Nether_Decraft_Crate_of_Dark_Oak Sapling
       - Nether_Decraft_Crate_of_Fish
-      - Nether_Decraft_Crate_of_Glass_bottles
+      - Nether_Decraft_Crate_of_Glass_Bottles
       - Nether_Decraft_Crate_of_Grass
+      - Nether_Decraft_Crate_of_Grass_Blocks
+      - Nether_Decraft_Crate_of_Jungle_Sapling
       - Nether_Decraft_Crate_of_Melons
       - Nether_Decraft_Crate_of_Nether_Warts
+      - Nether_Decraft_Crate_of_Oak_Sapling
       - Nether_Decraft_Crate_of_Pumpkins
       - Nether_Decraft_Crate_of_Red_Mushrooms
       - Nether_Decraft_Crate_of_Red_Rose
-      - Nether_Decraft_Crate_of_Rotten_Flesh
-      - Nether_Decraft_Crate_of_Sugar
+      - Nether_Decraft_Crate_of_Salmon
+      - Nether_Decraft_Crate_of_Spruce_Sapling
       - Nether_Decraft_Crate_of_Sugar_Cane
       - Nether_Decraft_Crate_of_Vine
       - Nether_Decraft_Crate_of_Wheat
       - Nether_Decraft_Crate_of_Yellow_Flower
-      - Nether_Decraft_Crate_of_Cacti
     repair_multiple: 2
     repair_inputs:
       Diamonds:
@@ -811,7 +820,6 @@ production_factories:
     inputs:
       Diamond:
         material: DIAMOND
-
         amount: 128
       Iron Ingot:
         material: IRON_INGOT
@@ -820,7 +828,6 @@ production_factories:
       - Diamond_XP_Bottle_0
       - Diamond_XP_Bottle_1
       - Diamond_XP_Bottle_2
-
     repair_multiple: 5
     repair_inputs:
       Diamond:
@@ -950,7 +957,7 @@ production_factories:
     inputs:  
       Emerald Blocks:
         material: EMERALD_BLOCK
-        amount: 192   
+        amount: 96   
     recipes:
       - Create_Iron_Axe
       - Create_Iron_Pickaxe
@@ -976,7 +983,7 @@ production_factories:
     inputs:
       Emerald Blocks:
         material: EMERALD_BLOCK
-        amount: 128   
+        amount: 64   
     recipes:
       - Create_Diamond_Leggings
       - Create_Diamond_Boots
@@ -1004,7 +1011,7 @@ production_factories:
     inputs:
       Emerald Blocks:
         material: EMERALD_BLOCK
-        amount: 64  
+        amount: 32  
     recipes:
       - Create_Bow
       - Create_Diamond_Sword
@@ -1024,10 +1031,10 @@ production_factories:
     inputs:
       Diamond Block:
         material: DIAMOND_BLOCK
-        amount: 64
+        amount: 32
       Emerald Block:
         material: EMERALD_BLOCK
-        amount: 128
+        amount: 64
     recipes:
       - Enchant_Sharpness
       - Enchant_Fire_Aspect
@@ -1047,10 +1054,10 @@ production_factories:
     inputs:
       Diamond Block:
         material: DIAMOND_BLOCK
-        amount: 128
+        amount: 64
       Emerald Block:
         material: EMERALD_BLOCK
-        amount: 256
+        amount: 96
     recipes:
       - Enchant_P4_Chest
       - Enchant_P4_Legs
@@ -1075,10 +1082,10 @@ production_factories:
     inputs:
       Diamond Block:
         material: DIAMOND_BLOCK
-        amount: 192
+        amount: 96
       Emerald Block:
         material: EMERALD_BLOCK
-        amount: 256
+        amount: 128
     recipes:
       - Enchant_Picks_E5
       - Enchant_Picks_U3
@@ -1550,7 +1557,7 @@ production_factories:
     inputs:
       Iron Ingot:
         material: IRON_INGOT
-        amount: 288
+        amount: 224
     recipes:
       - Iron_XP_Bottle_0
       - Iron_XP_Bottle_1
@@ -3154,28 +3161,30 @@ production_recipes:
       Melon Block:
         material: MELON_BLOCK
         amount: 64
-      Rotten Flesh:
-        material: ROTTEN_FLESH
-        amount: 512
       Brown Mushroom:
         material: BROWN_MUSHROOM
-        amount: 64
+        amount: 128
       Bread:
         material: BREAD
-        amount: 128
-      Nether Wart:
-        material: NETHER_STALK
         amount: 128
       Sugar Cane:
         material: SUGAR_CANE
         amount: 512
       Yellow Flower:
         material: YELLOW_FLOWER
-        amount: 64
-      Cocoa:
-        material: INK_SACK
-        amount: 64
+        amount: 32
+      Oak Sapling:
+        material: SAPLING
+        amount: 8
+        durability: 0
+      Jungle Sapling:
+        material: SAPLING
+        amount: 8
         durability: 3
+      Acacia Sapling:
+        material: SAPLING
+        amount: 8
+        durability: 4
     outputs:
       Emerald Block:
         material: EMERALD_BLOCK
@@ -4154,7 +4163,7 @@ production_recipes:
     outputs:
       Cooked Salmon:
         material: COOKED_FISH
-        amount: 128
+        amount: 512
         durability: 1
   Produce_TNT:
     name: Produce TNT
@@ -4395,45 +4404,48 @@ production_recipes:
       Glass Bottle:
         material: GLASS_BOTTLE
         amount: 256
-      Nether Wart:
-        material: NETHER_STALK
-        amount: 128
-      Pumpkin:
-        material: PUMPKIN
-        amount: 256
-      Cocoa:
-        material: INK_SACK
-        amount: 64
-        durability: 3
-      Spider Eye:
-        material: SPIDER_EYE
-        amount: 32
-      Grass:
-        material: LONG_GRASS
-        amount: 128
-        durability: 1
-      Red Mushroom:
-        material: RED_MUSHROOM
-        amount: 64
-      Cooked Fish:
-        material: COOKED_FISH
-        amount: 16
       Cactus:
         material: CACTUS
         amount: 512
       Wheat:
         material: WHEAT
         amount: 512
+      Pumpkin:
+        material: PUMPKIN
+        amount: 256
+      Grass:
+        material: LONG_GRASS
+        amount: 128
+        durability: 1
+      Cocoa:
+        material: INK_SACK
+        amount: 64
+        durability: 3
+      Red Mushroom:
+        material: RED_MUSHROOM
+        amount: 128
+      Cooked Fish:
+        material: COOKED_FISH
+        amount: 16
       Red Rose:
         material: RED_ROSE
+        amount: 16
+      Cooked Salmon:
+        material: COOKED_FISH
         amount: 8
+        durability: 1
+      Spruce Sapling:
+        material: SAPLING
+        amount: 8
+        durability: 1
+      Dark Oak Sapling:
+        material: SAPLING
+        amount: 8
+        durability: 5
     outputs:
-
       Emerald Block:
         material: EMERALD_BLOCK
         amount: 2
-
-
   Diamond_XP_Bottle_2:
     name: Brew XP Bottles  - 3
     inputs:
@@ -4443,33 +4455,37 @@ production_recipes:
       Cookie:
         material: COOKIE
         amount: 768
-      Pumpkin:
-        material: PUMPKIN
-        amount: 256
-      Yellow Flower:
-        material: YELLOW_FLOWER
-        amount: 64
-      Rotten Flesh:
-        material: ROTTEN_FLESH
-        amount: 512
-      Red Mushroom:
-        material: RED_MUSHROOM
-        amount: 64
-      Vine:
-        material: VINE
-        amount: 128
       Baked Potato:
         material: BAKED_POTATO
         amount: 512
       Sugar Cane:
         material: SUGAR_CANE
         amount: 512
+      Grass Blocks:
+        material: GRASS
+        amount: 32
+      Pumpkin:
+        material: PUMPKIN
+        amount: 256
       Nether Wart:
         material: NETHER_STALK
         amount: 128
+      Vine:
+        material: VINE
+        amount: 128
+      Red Mushroom:
+        material: RED_MUSHROOM
+        amount: 128
       Melon Block:
         material: MELON_BLOCK
-        amount: 128
+        amount: 64
+      Yellow Flower:
+        material: YELLOW_FLOWER
+        amount: 32
+      Birch Sapling:
+        material: SAPLING
+        amount: 8
+        durability: 2
     outputs:
       Emerald Block:
         material: EMERALD_BLOCK
@@ -8279,6 +8295,7 @@ production_recipes:
         level: 3
   Nether_Craft_Crate_of_Melons:
     name: Craft Crate of Melons
+    production_time: 4
     inputs: 
        Melon Blocks:
          material: MELON_BLOCK
@@ -8292,6 +8309,7 @@ production_recipes:
          lore: Crate of Melons
   Nether_Craft_Crate_of_Fish:
     name: Craft Crate of Fish
+    production_time: 4
     inputs: 
        Fish:
          material: COOKED_FISH
@@ -8303,21 +8321,9 @@ production_recipes:
          amount: 16
          display_name: Crate of Fish
          lore: Crate of Fish
-  Nether_Craft_Crate_of_Sugar:
-    name: Craft Crate of Sugar
-    inputs: 
-       Sugar:
-         material: SUGAR
-         amount: 1024
-    outputs:
-       Crate of Sugar:
-         material: WOOD
-         durability: 0
-         amount: 16
-         display_name: Crate of Sugar
-         lore: Crate of Sugar
   Nether_Craft_Crate_of_Sugar_Cane:
     name: Craft Crate of Sugar Cane
+    production_time: 4
     inputs: 
        Sugar Cane:
          material: SUGAR_CANE
@@ -8331,6 +8337,7 @@ production_recipes:
          lore: Crate of Sugar Cane
   Nether_Craft_Crate_of_Nether_Warts:
     name: Craft Crate of Nether Warts
+    production_time: 4
     inputs: 
        Nether Wart:
          material: NETHER_STALK
@@ -8344,6 +8351,7 @@ production_recipes:
          lore: Crate of Nether Warts
   Nether_Craft_Crate_of_Cookies:
     name: Craft Crate of Cookies
+    production_time: 4
     inputs: 
        Cookie:
          material: COOKIE
@@ -8357,6 +8365,7 @@ production_recipes:
          lore: Crate of Cookies
   Nether_Craft_Crate_of_Baked_Potatoes:
     name: Craft Crate of Baked Potatoes
+    production_time: 4
     inputs: 
        Potato:
          material: BAKED_POTATO
@@ -8370,6 +8379,7 @@ production_recipes:
          lore: Crate of Potatoes
   Nether_Craft_Crate_of_Carrots:
     name: Craft Crate of Carrots
+    production_time: 4
     inputs: 
        Carrot:
          material: CARROT_ITEM 
@@ -8383,6 +8393,7 @@ production_recipes:
          lore: Crate of Carrots
   Nether_Craft_Crate_of_Cocoa:
     name: Craft Crate of Cocoa
+    production_time: 4
     inputs: 
        Cocoa:
          material: INK_SACK 
@@ -8397,6 +8408,7 @@ production_recipes:
          lore: Crate of Cocoa
   Nether_Craft_Crate_of_Pumpkins:
     name: Craft Crate of Pumpkins
+    production_time: 4
     inputs: 
        Pumpkin:
          material: PUMPKIN
@@ -8410,6 +8422,7 @@ production_recipes:
          lore: Crate of Pumpkins
   Nether_Craft_Crate_of_Cacti:
     name: Craft Crate of Cacti
+    production_time: 4
     inputs: 
        Catus:
          material: CACTUS
@@ -8423,6 +8436,7 @@ production_recipes:
          lore: Crate of Cacti
   Nether_Craft_Crate_of_Bread:
     name: Craft Crate of Bread
+    production_time: 4
     inputs: 
        Bread:
          material: BREAD
@@ -8436,6 +8450,7 @@ production_recipes:
          lore: Crate of Bread
   Nether_Craft_Crate_of_Wheat:
     name: Craft Crate of Wheat
+    production_time: 4
     inputs: 
        Wheat:
          material: WHEAT
@@ -8449,6 +8464,7 @@ production_recipes:
          lore: Crate of Wheat
   Nether_Craft_Crate_of_Grass:
     name: Craft Crate of Grass
+    production_time: 4
     inputs: 
        Grass:
          material: LONG_GRASS
@@ -8462,6 +8478,7 @@ production_recipes:
          lore: Crate of Grass
   Nether_Craft_Crate_of_Red_Rose:
     name: Craft Crate of Red Rose
+    production_time: 4
     inputs: 
        Red Roses:
          material: RED_ROSE
@@ -8475,6 +8492,7 @@ production_recipes:
          lore: Crate of Red Rose 
   Nether_Craft_Crate_of_Vine:
     name: Craft Crate of Vine
+    production_time: 4
     inputs: 
        Vine:
          material: VINE
@@ -8488,6 +8506,7 @@ production_recipes:
          lore: Crate of Vine
   Nether_Craft_Crate_of_Brown_Mushrooms:
     name: Craft Crate of Brown Mushrooms
+    production_time: 4
     inputs: 
        Brown Mushroom:
          material: BROWN_MUSHROOM
@@ -8501,6 +8520,7 @@ production_recipes:
          lore: Crate of Brown Mushrooms
   Nether_Craft_Crate_of_Red_Mushrooms:
     name: Craft Crate of Red Mushrooms
+    production_time: 4
     inputs: 
        Red Mushroom:
          material: RED_MUSHROOM
@@ -8512,21 +8532,9 @@ production_recipes:
          amount: 16
          display_name: Crate of Red Mushrooms
          lore: Crate of Red Mushrooms
-  Nether_Craft_Crate_of_Rotten_Flesh:
-    name: Craft Crate of Rotten Flesh
-    inputs: 
-       Rotten Flesh:
-         material: ROTTEN_FLESH
-         amount: 1024
-    outputs:
-       Crate of Rotten Flesh:
-         material: WOOD
-         durability: 0
-         amount: 16
-         display_name: Crate of Rotten Flesh
-         lore: Crate of Rotten Flesh
   Nether_Craft_Crate_of_Yellow_Flower:
     name: Craft Crate of Yellow Flower
+    production_time: 4
     inputs: 
        Yellow Flower:
          material: YELLOW_FLOWER
@@ -8540,19 +8548,140 @@ production_recipes:
          lore: Crate of Yellow Flower
   Nether_Craft_Crate_of_Glass_Bottles:
     name: Craft Crate of Glass Bottles
+    production_time: 64
     inputs: 
        Glass Bottles:
          material: GLASS_BOTTLE
-         amount: 1024
+         amount: 512
     outputs:
        Crate of Glass Bottles:
          material: WOOD
          durability: 0
-         amount: 16
+         amount: 8
          display_name: Crate of Glass Bottles
          lore: Crate of Glass Bottles
+  Nether_Craft_Crate_of_Acacia_Sapling:
+    name: Craft Crate of Acacia Sapling
+    production_time: 4
+    inputs:
+       Acacia Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+    outputs: 
+       Crate of Acacia Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Acacia Sapling
+         lore: Crate of Acacia Sapling
+  Nether_Craft_Crate_of_Birch_Sapling:
+    name: Craft Crate of Birch Sapling
+    production_time: 4
+    inputs:
+       Birch Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+    outputs: 
+       Crate of Birch Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Birch Sapling
+         lore: Crate of Birch Sapling
+  Nether_Craft_Crate_of_Dark_Oak_Sapling:
+    name: Craft Crate of Dark Oak Sapling
+    production_time: 4
+    inputs:
+       Dark Oak Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+    outputs: 
+       Crate of Dark Oak Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Dark Oak Sapling
+         lore: Crate of Dark Oak Sapling
+  Nether_Craft_Crate_of_Grass_Blocks:
+    name: Craft Crate of Grass Blocks
+    production_time: 4
+    inputs:
+       Grass Blocks:
+         material: GRASS
+         amount: 1024
+    outputs: 
+       Crate of Grass Blocks:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Grass Blocks
+         lore: Crate of Grass Blocks
+  Nether_Craft_Crate_of_Jungle_Sapling:
+    name: Craft Crate of Jungle Sapling
+    production_time: 4
+    inputs:
+       Jungle Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+    outputs: 
+       Crate of Jungle Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Jungle Sapling
+         lore: Crate of Jungle Sapling
+  Nether_Craft_Crate_of_Oak_Sapling:
+    name: Craft Crate of Oak Sapling
+    production_time: 4
+    inputs:
+       Oak Sapling:
+         material: SAPLING
+         durability: 0
+         amount: 1024
+    outputs: 
+       Crate of Oak Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Oak Sapling
+         lore: Crate of Oak Sapling
+  Nether_Craft_Crate_of_Salmon:
+    name: Craft Crate of Salmon
+    production_time: 4
+    inputs:
+      Cooked Salmon:
+         material: COOKED_FISH
+         durability: 1
+         amount: 1024
+    outputs: 
+       Crate of Salmon:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Salmon
+         lore: Crate of Salmon
+  Nether_Craft_Crate_of_Spruce_Sapling:
+    name: Craft Crate of Spruce Sapling
+    production_time: 4
+    inputs:
+       Spruce Sapling:
+         material: SAPLING
+         durability: 1
+         amount: 1024
+    outputs: 
+       Crate of Spruce Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Spruce Sapling
+         lore: Crate of Spruce Sapling
   Nether_Decraft_Crate_of_Melons:
     name: Decraft Crate of Melons
+    production_time: 4
     inputs:
        Crate of Melons:
          material: WOOD
@@ -8566,6 +8695,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Fish:
     name: Decraft Crate of Fish
+    production_time: 4
     inputs:
        Crate of Fish:
          material: WOOD
@@ -8577,21 +8707,9 @@ production_recipes:
        Fish:
          material: COOKED_FISH
          amount: 1024
-  Nether_Decraft_Crate_of_Sugar:
-    name: Decraft Crate of Sugar
-    inputs:
-       Crate of Sugar:
-         material: WOOD
-         durability: 0
-         amount: 16
-         display_name: Crate of Sugar
-         lore: Crate of Sugar
-    outputs: 
-       Sugar:
-         material: SUGAR
-         amount: 1024
   Nether_Decraft_Crate_of_Sugar_Cane:
     name: Decraft Crate of Sugar Cane
+    production_time: 4
     inputs:
        Crate of Sugar Cane:
          material: WOOD
@@ -8605,6 +8723,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Nether_Warts:
     name: Decraft Crate of Nether Warts
+    production_time: 4
     inputs:
        Crate of Nether Warts:
          material: WOOD
@@ -8618,6 +8737,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Cookies:
     name: Decraft Crate of Cookies
+    production_time: 4
     inputs:
        Crate of Cookies:
          material: WOOD
@@ -8631,6 +8751,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Baked_Potatoes:
     name: Decraft Crate of Baked Potatoes
+    production_time: 4
     inputs:
        Crate of Potatoes:
          material: WOOD
@@ -8644,6 +8765,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Carrots:
     name: Decraft Crate of Carrots
+    production_time: 4
     inputs:
        Crate of Carrots:
          material: WOOD
@@ -8657,6 +8779,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Cocoa:
     name: Decraft Crate of Cocoa
+    production_time: 4
     inputs:
        Crate of Cocoa:
          material: WOOD
@@ -8671,6 +8794,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Pumpkins:
     name: Decraft Crate of Pumpkins
+    production_time: 4
     inputs:
        Crate of Pumpkins:
          material: WOOD
@@ -8684,6 +8808,7 @@ production_recipes:
          amount: 1024
   Nether_Decraft_Crate_of_Cacti:
     name: Decraft Crate of Cacti
+    production_time: 4
     outputs: 
        Catus:
          material: CACTUS
@@ -8697,6 +8822,7 @@ production_recipes:
          lore: Crate of Cacti
   Nether_Decraft_Crate_of_Bread:
     name: Decraft Crate of Bread
+    production_time: 4
     outputs: 
        Bread:
          material: BREAD
@@ -8710,6 +8836,7 @@ production_recipes:
          lore: Crate of Bread
   Nether_Decraft_Crate_of_Wheat:
     name: Decraft Crate of Wheat
+    production_time: 4
     outputs: 
        Wheat:
          material: WHEAT
@@ -8723,6 +8850,7 @@ production_recipes:
          lore: Crate of Wheat
   Nether_Decraft_Crate_of_Grass:
     name: Decraft Crate of Grass
+    production_time: 4
     outputs: 
        Grass:
          material: LONG_GRASS
@@ -8736,6 +8864,7 @@ production_recipes:
          lore: Crate of Grass
   Nether_Decraft_Crate_of_Red_Rose:
     name: Decraft Crate of Red Rose
+    production_time: 4
     outputs: 
        Red Roses:
          material: RED_ROSE
@@ -8749,6 +8878,7 @@ production_recipes:
          lore: Crate of Red Rose 
   Nether_Decraft_Crate_of_Vine:
     name: Decraft Crate of Vine
+    production_time: 4
     outputs: 
        Vine:
          material: VINE
@@ -8762,6 +8892,7 @@ production_recipes:
          lore: Crate of Vine
   Nether_Decraft_Crate_of_Brown_Mushrooms:
     name: Decraft Crate of Brown Mushrooms
+    production_time: 4
     outputs: 
        Brown Mushroom:
          material: BROWN_MUSHROOM
@@ -8775,6 +8906,7 @@ production_recipes:
          lore: Crate of Brown Mushrooms
   Nether_Decraft_Crate_of_Red_Mushrooms:
     name: Decraft Crate of Red Mushrooms
+    production_time: 4
     outputs: 
        Red Mushroom:
          material: RED_MUSHROOM
@@ -8786,21 +8918,9 @@ production_recipes:
          amount: 16
          display_name: Crate of Red Mushrooms
          lore: Crate of Red Mushrooms
-  Nether_Decraft_Crate_of_Rotten_Flesh:
-    name: Decraft Crate of Rotten Flesh
-    outputs: 
-       Rotten Flesh:
-         material: ROTTEN_FLESH
-         amount: 1024
-    inputs:
-       Crate of Rotten Flesh:
-         material: WOOD
-         durability: 0
-         amount: 16
-         display_name: Crate of Rotten Flesh
-         lore: Crate of Rotten Flesh
   Nether_Decraft_Crate_of_Yellow_Flower:
     name: Decraft Crate of Yellow Flower
+    production_time: 4
     outputs: 
        Yellow Flower:
          material: YELLOW_FLOWER
@@ -8814,17 +8934,137 @@ production_recipes:
          lore: Crate of Yellow Flower
   Nether_Decraft_Crate_of_Glass_Bottles:
     name: Decraft Crate of Glass Bottles
+    production_time: 64
     outputs: 
-       Glass Bottles:
-         material: GLASS_BOTTLE
-         amount: 1024
+       Sand:
+         material: SAND
+         amount: 512
     inputs:
        Crate of Glass Bottles:
          material: WOOD
          durability: 0
-         amount: 16
+         amount: 8
          display_name: Crate of Glass Bottles
          lore: Crate of Glass Bottles
+  Nether_Decraft_Crate_of_Acacia_Sapling:
+    name: Decraft Crate of Acacia Sapling
+    production_time: 4
+    inputs:
+       Crate of Acacia Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Acacia Sapling
+         lore: Crate of Acacia Sapling
+    outputs: 
+       Acacia Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+  Nether_Decraft_Crate_of_Birch_Sapling:
+    name: Decraft Crate of Birch Sapling
+    production_time: 4
+    inputs:
+       Crate of Birch Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Birch Sapling
+         lore: Crate of Birch Sapling
+    outputs: 
+       Birch Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+  Nether_Decraft_Crate_of_Dark_Oak_Sapling:
+    name: Decraft Crate of Dark Oak Sapling
+    production_time: 4
+    inputs:
+       Crate of Dark Oak Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Dark Oak Sapling
+         lore: Crate of Dark Oak Sapling
+    outputs: 
+       Dark Oak Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+  Nether_Decraft_Crate_of_Grass_Blocks:
+    name: Decraft Crate of Grass Blocks
+    production_time: 4
+    inputs:
+       Crate of Grass Blocks:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Grass Blocks
+         lore: Crate of Grass Blocks
+    outputs: 
+       Grass Blocks:
+         material: GRASS
+         amount: 1024
+  Nether_Decraft_Crate_of_Jungle_Sapling:
+    name: Decraft Crate of Jungle Sapling
+    production_time: 4
+    inputs:
+       Crate of Jungle Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Jungle Sapling
+         lore: Crate of Jungle Sapling
+    outputs: 
+       Jungle Sapling:
+         material: SAPLING
+         durability: 4
+         amount: 1024
+  Nether_Decraft_Crate_of_Oak_Sapling:
+    name: Decraft Crate of Oak Sapling
+    production_time: 4
+    inputs:
+       Crate of Oak Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Oak Sapling
+         lore: Crate of Oak Sapling
+    outputs: 
+       Oak Sapling:
+         material: SAPLING
+         durability: 0
+         amount: 1024
+  Nether_Decraft_Crate_of_Salmon:
+    name: Decraft Crate of Salmon
+    production_time: 4
+    inputs:
+       Crate of Salmon:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Salmon
+         lore: Crate of Salmon
+    outputs: 
+      Cooked Salmon:
+         material: COOKED_FISH
+         durability: 1
+         amount: 1024
+  Nether_Decraft_Crate_of_Spruce_Sapling:
+    name: Decraft Crate of Spruce Sapling
+    production_time: 4
+    inputs:
+       Crate of Spruce Sapling:
+         material: WOOD
+         durability: 0
+         amount: 16
+         display_name: Crate of Spruce Sapling
+         lore: Crate of Spruce Sapling
+    outputs: 
+       Spruce Sapling:
+         material: SAPLING
+         durability: 1
+         amount: 1024
   Create_Diamond_Axe:
     name: Create Diamond Axe
     production_time: 40
@@ -10135,30 +10375,18 @@ production_recipes:
          amount: 256
          display_name: Crate of Carrots
          lore: Crate of Carrots
-       Crate of Sugar:
+       Crate of Sugar Cane:
          material: WOOD
          durability: 0
          amount: 256
-         display_name: Crate of Sugar
-         lore: Crate of Sugar
-       Crate of Rotten Flesh:
-         material: WOOD
-         durability: 0
-         amount: 256
-         display_name: Crate of Rotten Flesh
-         lore: Crate of Rotten Flesh
+         display_name: Crate of Sugar Cane
+         lore: Crate of Sugar Cane
        Crate of Bread:
          material: WOOD
          durability: 0
          amount: 64
          display_name: Crate of Bread
          lore: Crate of Bread
-       Crate of Nether Warts:
-         material: WOOD
-         durability: 0
-         amount: 64
-         display_name: Crate of Nether Warts
-         lore: Crate of Nether Warts
        Crate of Grass:
          material: WOOD
          durability: 0
@@ -10189,6 +10417,24 @@ production_recipes:
          amount: 16
          display_name: Crate of Yellow Flower
          lore: Crate of Yellow Flower
+       Crate of Oak Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Oak Sapling
+         lore: Crate of Oak Sapling
+       Crate of Jungle Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Jungle Sapling
+         lore: Crate of Jungle Sapling
+       Crate of Acacia Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Acacia Sapling
+         lore: Crate of Acacia Sapling
     outputs:
         Emerald Blocks:
           material: EMERALD_BLOCK
@@ -10208,24 +10454,12 @@ production_recipes:
          amount: 256
          display_name: Crate of Cacti
          lore: Crate of Cacti
-       Crate of Bread:
-         material: WOOD
-         durability: 0
-         amount: 128
-         display_name: Crate of Wheat
-         lore: Crate of Wheat
        Crate of Pumpkins:
          material: WOOD
          durability: 0
          amount: 128
          display_name: Crate of Pumpkins
          lore: Crate of Pumpkins
-       Crate of Nether Warts:
-         material: WOOD
-         durability: 0
-         amount: 64
-         display_name: Crate of Nether Warts
-         lore: Crate of Nether Warts
        Crate of Grass:
          material: WOOD
          durability: 0
@@ -10241,27 +10475,39 @@ production_recipes:
        Crate of Red Mushrooms:
          material: WOOD
          durability: 0
-         amount: 32
+         amount: 64
          display_name: Crate of Red Mushrooms
          lore: Crate of Red Mushrooms
-       Crate of Rotten Flesh:
-         material: WOOD
-         durability: 0
-         amount: 256
-         display_name: Crate of Rotten Flesh
-         lore: Crate of Rotten Flesh
        Crate of Fish:
          material: WOOD
          durability: 0
          amount: 8
          display_name: Crate of Fish
          lore: Crate of Fish
+       Crate of Salmon:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Salmon
+         lore: Crate of Salmon
        Crate of Red Rose:
          material: WOOD
          durability: 0
-         amount: 8
+         amount: 4
          display_name: Crate of Red Rose
          lore: Crate of Red Rose 
+       Crate of Spruce Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Spruce Sapling
+         lore: Crate of Spruce Sapling
+       Crate of Dark Oak Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Dark Oak Sapling
+         lore: Crate of Dark Oak Sapling
     outputs:
         Emerald Blocks:
           material: EMERALD_BLOCK
@@ -10275,30 +10521,18 @@ production_recipes:
          amount: 128
          display_name: Crate of Glass Bottles
          lore: Crate of Glass Bottles
-       Crate of Fish:
-         material: WOOD
-         durability: 0
-         amount: 256
-         display_name: Crate of Fish
-         lore: Crate of Fish
        Crate of Potatoes:
          material: WOOD
          durability: 0
          amount: 256
          display_name: Crate of Potatoes
          lore: Crate of Potatoes
-       Crate of Sugar:
+       Crate of Sugar Cane:
          material: WOOD
          durability: 0
          amount: 256
-         display_name: Crate of Sugar
-         lore: Crate of Sugar
-       Crate of Rotten Flesh:
-         material: WOOD
-         durability: 0
-         amount: 256
-         display_name: Crate of Rotten Flesh
-         lore: Crate of Rotten Flesh
+         display_name: Crate of Sugar Cane
+         lore: Crate of Sugar Cane
        Crate of Pumpkins:
          material: WOOD
          durability: 0
@@ -10326,7 +10560,7 @@ production_recipes:
        Crate of Red Mushrooms:
          material: WOOD
          durability: 0
-         amount: 32
+         amount: 64
          display_name: Crate of Red Mushrooms
          lore: Crate of Red Mushrooms
        Crate of Yellow Flower:
@@ -10335,6 +10569,12 @@ production_recipes:
          amount: 16
          display_name: Crate of Yellow Flower
          lore: Crate of Yellow Flower
+       Crate of Birch Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Birch Sapling
+         lore: Crate of Birch Sapling
     outputs:
         Emerald Blocks:
           material: EMERALD_BLOCK
