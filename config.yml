@@ -4203,9 +4203,10 @@ production_recipes:
         material: LONG_GRASS
         amount: 32
         durability: 1
-      Cooked Fish:
-        material: COOKED_FISH
-        amount: 16
+      Ink:
+        material: 'INK_SACK'
+        durability: 0
+        amount: 2
     outputs:
       Exp Bottle:
         material: EXP_BOTTLE
