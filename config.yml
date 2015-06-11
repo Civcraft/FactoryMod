@@ -655,18 +655,29 @@ production_factories:
         material: COAL
         durability: 1
     inputs:
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 40
       Diamond:
         material: DIAMOND
-        amount: 50
+        amount: 160
+      Iron Ingot:
+        material: IRON_INGOT
+        amount: 200
     recipes:
-      - Diamond_XP_Bottle_0
-      - Diamond_XP_Bottle_1
-      - Diamond_XP_Bottle_2
-      - Diamond_XP_Bottle_3
+      - Diamond_Crate
+      - Convert_Iron_Crate
     repair_multiple: 5
     repair_inputs:
+      Emerald Block:
+        material: EMERALD_BLOCK
+        amount: 1
       Diamond:
         material: DIAMOND
+        amount: 3
+      Iron Ingot:
+        material: IRON_INGOT
+        amount: 4
   Diamond_Chestplate_Smithy:
     name: Diamond Chestplate Smithy
     fuel:
@@ -1229,19 +1240,26 @@ production_factories:
         material: COAL
         durability: 1
     inputs:
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 5
       Iron Ingot:
         material: IRON_INGOT
         amount: 200
     recipes:
-      - Iron_XP_Bottle_0
-      - Iron_XP_Bottle_1
-      - Iron_XP_Bottle_2
-      - Iron_XP_Bottle_3
+      - Iron_XP_Recipe_1
+      - Iron_XP_Recipe_2
+      - Iron_XP_Recipe_3
+      - Iron_Crate
       - Bastion_Smaragdus_Polisher
-    repair_multiple: 20
+    repair_multiple: 10
     repair_inputs:
       Iron Ingot:
         material: IRON_INGOT
+        amount: 2
+      Exp Bottle:
+        material: EXP_BOTTLE
+        amount: 4
   Iron_Chestplate_Smithy:
     name: Iron Chestplate Smithy
     fuel:
@@ -2589,16 +2607,51 @@ production_factories:
         material: STICK
         amount: 1024
     recipes:
-      - Wood_XP_Bottle_0
-      - Wood_XP_Bottle_1
-      - Wood_XP_Bottle_2
-      - Wood_XP_Bottle_3
-      - Wood_XP_Bottle_4
-      - Wood_XP_Bottle_5
+      - Wood_Plains_Crate
+      - Wood_Forest_Crate
+      - Wood_Jungle_Crate
+      - Wood_Desert_Crate
+      - Wood_XP_Recipe_1
+      - Wood_XP_Recipe_2
+      - Wood_XP_Recipe_3
+      - Wood_XP_Recipe_4
     repair_multiple: 103
     repair_inputs:
       Stick:
         material: STICK
+  Emerald_Cauldron:
+    name: Emerald Cauldron
+    fuel:
+      Charcoal:
+        material: COAL
+        durability: 1
+    inputs:
+      Nether Star:
+        material: NETHER_STAR
+        amount: 1
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 100
+      Diamonds:
+        material: DIAMOND
+        amount: 300
+      Iron:
+        materials: IRON_INGOT
+        amount: 200
+    recipes:
+      - Emerald_Crate
+      - Convert_Diamond_Crate
+    repair_multiple: 10
+    repair_inputs:
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 1
+      Diamonds:
+        material: DIAMOND
+        amount: 3
+      Iron:
+        material: IRON_INGOT
+        amount: 2
   Bastion_Factory:
     name: Bastion Factory
     fuel:
@@ -2727,43 +2780,6 @@ nether_factory:
   cost_scaling_radius: 5000
   use_fuel_on_teleport: false
 production_recipes:
-  Wood_XP_Bottle_0:
-    name: Brew XP Bottles  - 1
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 8
-      Wheat:
-        material: WHEAT
-        amount: 1280
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 8
-  Baked_Potato:
-    name: Bake Potato
-    production_time: 24
-    inputs:
-      Potato:
-        material: POTATO_ITEM
-        amount: 192
-    outputs:
-      Baked Potato:
-        material: BAKED_POTATO
-        amount: 384
-  Wood_XP_Bottle_2:
-    name: Brew XP Bottles  - 3
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 5
-      Baked Potato:
-        material: BAKED_POTATO
-        amount: 1920
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 5
   Dye_Black_Wool_Cyan:
     name: Dye Black Wool Cyan
     inputs:
@@ -2855,43 +2871,6 @@ production_recipes:
       Diamond:
         material: DIAMOND
         amount: 48
-  Diamond_XP_Bottle_0:
-    name: Brew XP Bottles  - 1
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 128
-      Carrot:
-        material: CARROT_ITEM
-        amount: 96
-      Melon Block:
-        material: MELON_BLOCK
-        amount: 32
-      Cactus:
-        material: CACTUS
-        amount: 256
-      Red Rose:
-        material: RED_ROSE
-        amount: 8
-      Rotten Flesh:
-        material: ROTTEN_FLESH
-        amount: 128
-      Red Mushroom:
-        material: RED_MUSHROOM
-        amount: 32
-      Vine:
-        material: VINE
-        amount: 32
-      Bread:
-        material: BREAD
-        amount: 128
-      Grilled Pork:
-        material: GRILLED_PORK
-        amount: 32
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 128
   Dye_Brown_Wool_Orange:
     name: Dye Brown Wool Orange
     inputs:
@@ -3208,25 +3187,6 @@ production_recipes:
         material: WOOL
         amount: 64
         durability: 9
-  Iron_XP_Bottle_1:
-    name: Brew XP Bottles  - 2
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 14
-      Carrot:
-        material: CARROT_ITEM
-        amount: 256
-      Nether Wart:
-        material: NETHER_STALK
-        amount: 256
-      Baked Potato:
-        material: BAKED_POTATO
-        amount: 256
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 14
   Dye_White_Wool_Red:
     name: Dye White Wool Red
     inputs:
@@ -3273,32 +3233,6 @@ production_recipes:
         material: WOOL
         amount: 64
         durability: 10
-  Wood_XP_Bottle_4:
-    name: Brew XP Bottles  - 5
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 6
-      Carrot:
-        material: CARROT_ITEM
-        amount: 1280
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 6
-  Wood_XP_Bottle_5:
-    name: Brew XP Bottles  - 6
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 8
-      Hay Bale:
-        material: HAY_BLOCK
-        amount: 143
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 8
   Dye_Light_Gray_Wool_Orange:
     name: Dye Light Gray Wool Orange
     inputs:
@@ -3945,19 +3879,6 @@ production_recipes:
         material: WOOL
         amount: 64
         durability: 13
-  Wood_XP_Bottle_3:
-    name: Brew XP Bottles  - 4
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 4
-      Cookie:
-        material: COOKIE
-        amount: 1280
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 4
   Iron_Chestplate:
     name: Forge Iron Chestplate.
     production_time: 40
@@ -4134,120 +4055,6 @@ production_recipes:
       Iron Leggings:
         material: IRON_LEGGINGS
         amount: 15
-  Diamond_XP_Bottle_1:
-    name: Brew XP Bottles  - 2
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 128
-      Nether Wart:
-        material: NETHER_STALK
-        amount: 64
-      Melon Block:
-        material: MELON_BLOCK
-        amount: 32
-      Sugar Cane:
-        material: SUGAR_CANE
-        amount: 128
-      Yellow Flower:
-        material: YELLOW_FLOWER
-        amount: 16
-      Rotten Flesh:
-        material: ROTTEN_FLESH
-        amount: 128
-      Brown Mushroom:
-        material: BROWN_MUSHROOM
-        amount: 64
-      Vine:
-        material: VINE
-        amount: 32
-      Baked Potato:
-        material: BAKED_POTATO
-        amount: 256
-      Cooked Chicken:
-        material: COOKED_CHICKEN
-        amount: 16
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 128
-  Diamond_XP_Bottle_2:
-    name: Brew XP Bottles  - 3
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 128
-      Wheat:
-        material: WHEAT
-        amount: 128
-      Cocoa:
-        material: INK_SACK
-        amount: 16
-        durability: 3
-      Pumpkin:
-        material: PUMPKIN
-        amount: 128
-      Cactus:
-        material: CACTUS
-        amount: 256
-      Red Rose:
-        material: RED_ROSE
-        amount: 8
-      Spider Eye:
-        material: SPIDER_EYE
-        amount: 32
-      Red Mushroom:
-        material: RED_MUSHROOM
-        amount: 16
-      Grass:
-        material: LONG_GRASS
-        amount: 32
-        durability: 1
-      Cooked Fish:
-        material: COOKED_FISH
-        amount: 16
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 128 
-  Diamond_XP_Bottle_3:
-    name: Brew XP Bottles  - 4
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 128
-      Nether Wart:
-        material: NETHER_STALK
-        amount: 64
-      Pumpkin:
-        material: PUMPKIN
-        amount: 128
-      Sugar Cane:
-        material: SUGAR_CANE
-        amount: 128
-      Yellow Flower:
-        material: YELLOW_FLOWER
-        amount: 16
-      Spider Eye:
-        material: SPIDER_EYE
-        amount: 32
-      Brown Mushroom:
-        material: BROWN_MUSHROOM
-        amount: 64
-      Grass:
-        material: LONG_GRASS
-        amount: 64
-        durability: 1
-      Cookie:
-        material: COOKIE
-        amount: 256
-      Cooked Beef:
-        material: COOKED_BEEF
-        amount: 32
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 128
   Dye_White_Wool_Gray:
     name: Dye White Wool Gray
     inputs:
@@ -4979,82 +4786,6 @@ production_recipes:
         material: SMOOTH_BRICK
         amount: 64
         durability: 2
-  Iron_XP_Bottle_0:
-    name: Brew XP Bottles  - 1
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 24
-      Carrot:
-        material: CARROT_ITEM
-        amount: 256
-      Cactus:
-        material: CACTUS
-        amount: 256
-      Bread:
-        material: BREAD
-        amount: 256
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 24
-  Iron_XP_Bottle_3:
-    name: Brew XP Bottles  - 4
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 42
-      Nether Wart:
-        material: NETHER_STALK
-        amount: 256
-      Melon Block:
-        material: MELON_BLOCK
-        amount: 64
-      Sugar Cane:
-        material: SUGAR_CANE
-        amount: 64
-      Cookie:
-        material: COOKIE
-        amount: 512
-      Baked Potato:
-        material: BAKED_POTATO
-        amount: 64
-      Grilled Pork:
-        material: GRILLED_PORK
-        amount: 64
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 42
-  Iron_XP_Bottle_2:
-    name: Brew XP Bottles  - 3
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 42
-      Carrot:
-        material: CARROT_ITEM
-        amount: 128
-      Cocoa:
-        material: INK_SACK
-        amount: 64
-        durability: 3
-      Pumpkin:
-        material: PUMPKIN
-        amount: 64
-      Cactus:
-        material: CACTUS
-        amount: 64
-      Bread:
-        material: BREAD
-        amount: 64
-      Cooked Beef:
-        material: COOKED_BEEF
-        amount: 32
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 42
   Diamond_Leggings:
     name: Forge Diamond Leggings.
     production_time: 35
@@ -5330,19 +5061,6 @@ production_recipes:
       Iron Hoe:
         material: IRON_HOE
         amount: 30
-  Wood_XP_Bottle_1:
-    name: Brew XP Bottles  - 2
-    inputs:
-      Glass Bottle:
-        material: GLASS_BOTTLE
-        amount: 4
-      Nether Wart:
-        material: NETHER_STALK
-        amount: 1280
-    outputs:
-      Exp Bottle:
-        material: EXP_BOTTLE
-        amount: 4
   Dye_Pink_Wool_Gray:
     name: Dye Pink Wool Gray
     inputs:
@@ -7723,3 +7441,351 @@ production_recipes:
       Sea Lantern:
         material: SEA_LANTERN
         amount: 16
+  Wood_Plains_Crate:
+    name: Package Plains Wooden Crate
+    production_time: 60
+    inputs:
+      Wheat:
+        material: WHEAT
+        amount: 512
+      Raw Potato:
+        material: POTATO
+        amount: 940
+      Dirt:
+        material: DIRT
+        amount: 384
+    outputs:
+      Wood Crate:
+        material: STORAGE_MINECART
+        amount: 1
+        display_name: Wood Crate
+        lore: Packaged local market goods. Useless for resource extraction without further refinement.
+  Wood_Forest_Crate:
+    name: Package Forest Wooden Crate
+    production_time: 60
+    inputs:
+      Leaves:
+        material: LEAVES
+        amount: 256
+      Birch Wood:
+        material: LOG
+        durability: 2
+        amount: 192
+      Oak Wood:
+        material: LOG
+        durability: 0
+        amount: 192
+      Dirt:
+        material: DIRT
+        amount: 384
+    outputs:
+      Wood Crate:
+        material: STORAGE_MINECART
+        amount: 1
+        display_name: Wood Crate
+        lore: Packaged local market goods. Useless for resource extraction without further refinement.
+  Wood_Jungle_Crate:
+    name: Package Jungle Wooden Crate
+    production_time: 60
+    inputs:
+      Cocoa:
+        material: INK_SACK
+        durability: 3
+        amount: 640
+      Carrot:
+        material: CARROT
+        amount: 640
+      Dirt:
+        material: DIRT
+        amount: 384
+    outputs:
+      Wood Crate:
+        material: STORAGE_MINECART
+        amount: 1
+        display_name: Wood Crate
+        lore: Packaged local market goods. Useless for resource extraction without further refinement.
+  Wood_Desert_Crate:
+    name: Package Desert Wooden Crate
+    production_time: 60
+    inputs:
+      Cactus:
+        material: CACTUS
+        amount: 512
+      Netherwart:
+        material: NETHER_STALK 
+        amount: 640
+      Sand:
+        material: SAND
+        amount: 32
+    outputs:
+      Wood Crate:
+        material: STORAGE_MINECART
+        amount: 1
+        display_name: Wood Crate
+        lore: Packaged local market goods. Useless for resource extraction without further refinement.
+  Wood_XP_Recipe_1:
+    name: Craft XP Bottles 1
+    production_time: 30
+    inputs:
+      Wheat:
+        material: WHEAT
+        amount: 1280
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 8
+    outputs:
+      Exp Bottle:
+        materials: EXP_BOTTLE
+        amount: 8
+  Wood_XP_Recipe_2:
+    name: Craft XP Bottles 2
+    production_time: 30
+    inputs:
+      Raw Potato:
+        material: POTATO
+        amount: 1280
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 4
+    outputs:
+      Exp Bottle:
+        materials: EXP_BOTTLE
+        amount: 4
+  Wood_XP_Recipe_3:
+    name: Craft XP Bottles 3
+    production_time: 30
+    inputs:
+      Cocoa:
+        material: INK SACK
+        durability: 3
+        amount: 1280
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 4
+    outputs:
+      Exp Bottle:
+        materials: EXP_BOTTLE
+        amount: 4
+  Wood_XP_Recipe_4:
+    name: Craft XP Bottles 4
+    production_time: 30
+    inputs:
+      Nether Wart:
+        material: NETHER_STALK
+        amount: 1280
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 6
+    outputs:
+      Exp Bottle:
+        materials: EXP_BOTTLE
+        amount: 6
+  Iron_Crate:
+    name: Package Iron Crate
+    production_time: 40
+    inputs:
+      Wood Crate:
+        material: STORAGE_MINECART
+        amount: 4
+        display_name: Wood Crate
+        lore: Packaged local market goods. Useless for resource extraction without further refinement.
+      Vine:
+        material: VINE
+        amount: 640
+      Cake:
+        material: CAKE
+        amount: 16
+      Red Mushroom:
+        material: RED_MUSHROOM
+        amount: 64
+      Apple:
+        material: APPLE
+        amount: 32
+      Netherrack:
+        material: NETHERRACK
+        amount: 96
+      Flint:
+        material: FLINT
+        amount: 64
+    outputs:
+      Iron Crate:
+        material: POWERED_MINECART
+        amount: 1
+        display_name: Iron Crate
+        lore: Processed market supplies. It can be converted into XP but it's not very efficient...
+  Iron_XP_Recipe_1:
+    name: Craft XP Bottles 1
+    production_time: 10
+    inputs:
+      Bread:
+        material: BREAD
+        amount: 384
+      Netherwart:
+        material: NETHER_STALK 
+        amount: 320
+      Baked Potato:
+        material: BAKED_POTATO
+        amount: 512
+      Awkward Potion:
+        material: POTION
+        durability: 16
+        amount: 18
+    outputs:
+      Exp Bottle:
+        materials: EXP_BOTTLE
+        amount: 18
+  Iron_XP_Recipe_2:
+    name: Craft XP Bottles 2
+    production_time: 10
+    inputs:
+      Rations:
+        material: MUSHROOM_SOUP
+        amount: 16
+        display_name: Rations
+        lore: An item used to create a Bastion Block
+      Carrots:
+        material: CARROT
+        amount: 512
+      Sugar:
+        material: SUGAR
+        amount: 640
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 13
+    outputs:
+      Exp Bottle:
+        materials: EXP_BOTTLE
+        amount: 13
+  Iron_XP_Recipe_3:
+    name: Craft XP Bottles 3
+    production_time: 10
+    inputs:
+      Cactus:
+        material: CACTUS
+        amount: 640
+      Cocoa:
+        material: INK_SACK
+        durability: 3
+        amount: 640
+      Baked Potato:
+        material: BAKED_POTATO
+        amount: 320
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 13
+    outputs:
+      Exp Bottle:
+        materials: EXP_BOTTLE
+        amount: 13
+  Diamond_Crate:
+    name: Package Diamond Crate
+    production_time: 20
+    inputs:
+      Iron Crate:
+        material: POWERED_MINECART
+        amount: 2
+        display_name: Iron Crate
+        lore: Processed market supplies. It can be converted into XP but it's not very efficient...
+      Golden Carrot:
+        material: GOLDEN_CARROT
+        amount: 64
+      Mycelium:
+        material: MYCEL
+        amount: 128
+      Pumpkin Pie:
+        material: PUMPKIN_PIE
+        amount: 64
+      Compact Ice:
+        material: COMPACT_ICE
+        amount: 256
+      Acacia Wood:
+        material: LOG_2
+        durability: 0
+        amount: 320
+      Melon:
+        material: MELON_BLOCK
+        amount: 256
+      Shrub:
+        material: LONG_GRASS
+        durability: 0
+        amount: 128
+    outputs:
+      Diamond Crate:
+        material: ENCHANTMENT_TABLE
+        amount: 1
+        display_name: Diamond Crate
+        lore: A large assortment of global resources. Nothing fancy. It certainly has a lot of XP value.
+  Convert_Iron_Crate:
+    name: Convert Iron Crate into XP
+    production_time: 30
+    fuel_time: 30
+    inputs:
+      Iron Crate:
+        material: POWERED_MINECART
+        amount: 1
+        display_name: Iron Crate
+        lore: Processed market supplies. It can be converted into XP but it's not very efficient...
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 64
+    outputs:
+      Emerald:
+        materials: EMERALD
+        amount: 15
+  Emerald_Crate:
+    name: Package Emerald Crate
+    production_time: 15
+    inputs:
+      Diamond Crate:
+        material: ENCHANTMENT_TABLE
+        amount: 2
+        display_name: Diamond Crate
+        lore: A large assortment of global resources. Nothing fancy. It certainly has a lot of XP value.
+      Ink Sac:
+        material: INK_SACK
+        durability: 0
+        amount: 16
+      Poisonous Potato:
+        material: POISONOUS_POTATO
+        amount: 32
+      Podzol:
+        material: DIRT
+        durability: 2
+        amount: 128
+      Rose:
+        material: RED_ROSE
+        durability: 0
+        amount: 192
+      Bucket of Lava:
+        material: LAVA_BUCKET
+        amount: 12
+      Obsidian:
+        material: OBSIDIAN
+        amount: 384
+      Eye of Ender:
+        material: EYE_OF_ENDER
+        amount: 32
+    outputs:
+      Emerald Block:
+        materials: EMERALD_BLOCK
+        amount: 29
+  Convert_Diamond_Crate:
+    name: Convert Diamond Crate into XP
+    production_time: 10
+    fuel_time: 10
+    inputs:
+      Diamond Crate:
+        material: ENCHANTMENT_TABLE
+        amount: 1
+        display_name: Diamond Crate
+        lore: A large assortment of global resources. Nothing fancy. It certainly has a lot of XP value.
+      Glass Bottle:
+        material: GLASS_BOTTLE
+        amount: 102
+    outputs:
+      Emerald Block:
+        materials: EMERALD_BLOCK
+        amount: 6
+      Emerald:
+        materials: EMERALD
+        amount: 4
