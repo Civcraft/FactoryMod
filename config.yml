@@ -8658,7 +8658,7 @@ production_recipes:
          display_name: Crate of Wheat
          lore: Crate of Wheat
   Nether_Craft_Crate_of_Grass:
-    name: Craft Crate of Grass Blocks
+    name: Craft Crate of Grass
     production_time: 4
     inputs: 
        Grass:
@@ -8666,12 +8666,12 @@ production_recipes:
          amount: 1024
          durability: 1
     outputs:
-       Crate of Grass Blocks:
+       Crate of Grass:
          material: WOOD
          durability: 0
          amount: 16
-         display_name: Crate of Grass Blocks
-         lore: Crate of Grass Blocks
+         display_name: Crate of Grass
+         lore: Crate of Grass
   Nether_Craft_Crate_of_Red_Rose:
     name: Craft Crate of Red Rose
     production_time: 4
@@ -9045,15 +9045,15 @@ production_recipes:
          material: WHEAT
          amount: 1024
   Nether_Decraft_Crate_of_Grass:
-    name: Decraft Crate of Grass Blocks
+    name: Decraft Crate of Grass
     production_time: 4
     inputs:
-       Crate of Grass Blocks:
+       Crate of Grass:
          material: WOOD
          durability: 0
          amount: 16
-         display_name: Crate of Grass Blocks
-         lore: Crate of Grass Blocks
+         display_name: Crate of Grass
+         lore: Crate of Grass
     outputs: 
        Grass:
          material: LONG_GRASS
@@ -10588,16 +10588,16 @@ production_recipes:
          amount: 64
          display_name: Crate of Bread
          lore: Crate of Bread
-       Crate of Grass:
+       Crate of Grass Blocks:
          material: WOOD
          durability: 0
          amount: 64
-         display_name: Crate of Grass
-         lore: Crate of Grass
+         display_name: Crate of Grass Blocks
+         lore: Crate of Grass Blocks
        Crate of Brown Mushrooms:
          material: WOOD
          durability: 0
-         amount: 32
+         amount: 64
          display_name: Crate of Brown Mushrooms
          lore: Crate of Brown Mushrooms
        Crate of Cocoa:
@@ -10667,12 +10667,12 @@ production_recipes:
          amount: 128
          display_name: Crate of Pumpkins
          lore: Crate of Pumpkins
-       Crate of Grass:
+       Crate of Grass Blocks:
          material: WOOD
          durability: 0
          amount: 64
-         display_name: Crate of Grass
-         lore: Crate of Grass
+         display_name: Crate of Grass Blocks
+         lore: Crate of Grass Blocks
        Crate of Cocoa:
          material: WOOD
          durability: 0
@@ -10700,7 +10700,7 @@ production_recipes:
        Crate of Red Rose:
          material: WOOD
          durability: 0
-         amount: 4
+         amount: 8
          display_name: Crate of Red Rose
          lore: Crate of Red Rose 
        Crate of Spruce Sapling:
@@ -10782,12 +10782,12 @@ production_recipes:
          amount: 16
          display_name: Crate of Yellow Flower
          lore: Crate of Yellow Flower
-       Crate of Grass Blocks:
+       Crate of Grass:
          material: WOOD
          durability: 0
          amount: 16
-         display_name: Crate of Grass Blocks
-         lore: Crate of Grass Blocks
+         display_name: Crate of Grass
+         lore: Crate of Grass
        Crate of Birch Sapling:
          material: WOOD
          durability: 0
