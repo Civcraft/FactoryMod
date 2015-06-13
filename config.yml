@@ -808,10 +808,10 @@ production_factories:
     repair_inputs:
       Diamonds:
         material: DIAMOND
-        amount: 3
+        amount: 1
       Emerald Blocks:
         material: EMERALD_BLOCK
-        amount: 6
+        amount: 2
   Diamond_Cauldron:
     name: Diamond Cauldron
     fuel:
@@ -10671,8 +10671,8 @@ production_recipes:
          material: WOOD
          durability: 0
          amount: 64
-         display_name: Crate of Grass Blocks
-         lore: Crate of Grass Blocks
+         display_name: Crate of Grass
+         lore: Crate of Grass
        Crate of Cocoa:
          material: WOOD
          durability: 0
@@ -10786,8 +10786,8 @@ production_recipes:
          material: WOOD
          durability: 0
          amount: 16
-         display_name: Crate of Grass
-         lore: Crate of Grass
+         display_name: Crate of Grass Blocks
+         lore: Crate of Grass Blocks
        Crate of Birch Sapling:
          material: WOOD
          durability: 0
