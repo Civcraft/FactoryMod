@@ -174,6 +174,7 @@ public class FactoryModPlugin extends JavaPlugin
 	public PrintingPressProperties printingPressProperties;
 	public NetherFactoryProperties netherFactoryProperties;
 	public RepairFactoryProperties repairFactoryProperties;
+	public CompactorProperties compactorProperties;
 	
 	public void onEnable()
 	{
@@ -585,6 +586,7 @@ public class FactoryModPlugin extends JavaPlugin
 	public NetherFactoryProperties getNetherFactoryProperties() {
 		return netherFactoryProperties;
 	}
+	
 	public RepairFactoryProperties getRepairFactoryProperties() {
 		return repairFactoryProperties;
 	}
