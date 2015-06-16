@@ -7445,12 +7445,12 @@ production_recipes:
     name: Package Plains Wooden Crate
     production_time: 60
     inputs:
-      Wheat:
-        material: WHEAT
-        amount: 512
+      Hay Bale:
+        material: HAY_BLOCK
+        amount: 256
       Raw Potato:
         material: POTATO
-        amount: 940
+        amount: 1600
       Dirt:
         material: DIRT
         amount: 384
@@ -7464,13 +7464,14 @@ production_recipes:
     name: Package Forest Wooden Crate
     production_time: 60
     inputs:
-      Leaves:
+      Oak Leaves:
         material: LEAVES
+        durability: 2
         amount: 256
       Birch Wood:
         material: LOG
         durability: 2
-        amount: 192
+        amount: 256
       Oak Wood:
         material: LOG
         durability: 0
@@ -7491,7 +7492,7 @@ production_recipes:
       Cocoa:
         material: INK_SACK
         durability: 3
-        amount: 640
+        amount: 512
       Carrot:
         material: CARROT
         amount: 640
@@ -7527,9 +7528,9 @@ production_recipes:
     name: Craft XP Bottles 1
     production_time: 30
     inputs:
-      Wheat:
-        material: WHEAT
-        amount: 1280
+      Hay Bale:
+        material: HAY_BLOCK
+        amount: 896
       Glass Bottle:
         material: GLASS_BOTTLE
         amount: 8
@@ -7558,7 +7559,7 @@ production_recipes:
       Cocoa:
         material: INK SACK
         durability: 3
-        amount: 1280
+        amount: 640
       Glass Bottle:
         material: GLASS_BOTTLE
         amount: 4
@@ -7592,6 +7593,9 @@ production_recipes:
       Vine:
         material: VINE
         amount: 640
+      Clay Blocks:
+        material: CLAY
+        amount: 64
       Cake:
         material: CAKE
         amount: 16
@@ -7600,7 +7604,7 @@ production_recipes:
         amount: 64
       Apple:
         material: APPLE
-        amount: 32
+        amount: 64
       Netherrack:
         material: NETHERRACK
         amount: 96
@@ -7619,15 +7623,15 @@ production_recipes:
     inputs:
       Bread:
         material: BREAD
-        amount: 384
+        amount: 640
       Netherwart:
         material: NETHER_STALK 
         amount: 320
       Baked Potato:
         material: BAKED_POTATO
-        amount: 512
-      Awkward Potion:
-        material: POTION
+        amount: 640
+      Glass Bottle:
+        material: GLASS_BOTTLE
         durability: 16
         amount: 18
     outputs:
@@ -7662,21 +7666,21 @@ production_recipes:
     inputs:
       Cactus:
         material: CACTUS
-        amount: 640
+        amount: 256
       Cocoa:
         material: INK_SACK
         durability: 3
-        amount: 640
+        amount: 256
       Baked Potato:
         material: BAKED_POTATO
         amount: 320
       Glass Bottle:
         material: GLASS_BOTTLE
-        amount: 13
+        amount: 16
     outputs:
       Exp Bottle:
         materials: EXP_BOTTLE
-        amount: 13
+        amount: 16
   Diamond_Crate:
     name: Package Diamond Crate
     production_time: 20
@@ -7696,7 +7700,7 @@ production_recipes:
         material: PUMPKIN_PIE
         amount: 64
       Compact Ice:
-        material: COMPACT_ICE
+        material: ICE
         amount: 256
       Acacia Wood:
         material: LOG_2
@@ -7707,7 +7711,7 @@ production_recipes:
         amount: 256
       Shrub:
         material: LONG_GRASS
-        durability: 0
+        durability: 1
         amount: 128
     outputs:
       Diamond Crate:
@@ -7731,7 +7735,7 @@ production_recipes:
     outputs:
       Emerald:
         materials: EMERALD
-        amount: 15
+        amount: 23
   Emerald_Crate:
     name: Package Emerald Crate
     production_time: 15
@@ -7758,7 +7762,7 @@ production_recipes:
         amount: 192
       Bucket of Lava:
         material: LAVA_BUCKET
-        amount: 12
+        amount: 16
       Obsidian:
         material: OBSIDIAN
         amount: 384
@@ -7768,7 +7772,7 @@ production_recipes:
     outputs:
       Emerald Block:
         materials: EMERALD_BLOCK
-        amount: 29
+        amount: 35
   Convert_Diamond_Crate:
     name: Convert Diamond Crate into XP
     production_time: 10
@@ -7785,7 +7789,7 @@ production_recipes:
     outputs:
       Emerald Block:
         materials: EMERALD_BLOCK
-        amount: 6
+        amount: 10
       Emerald:
         materials: EMERALD
-        amount: 4
+        amount: 3
