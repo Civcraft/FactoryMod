@@ -7559,7 +7559,7 @@ production_recipes:
       Cocoa:
         material: INK SACK
         durability: 3
-        amount: 640
+        amount: 512
       Glass Bottle:
         material: GLASS_BOTTLE
         amount: 4
@@ -7619,28 +7619,27 @@ production_recipes:
         lore: Processed market supplies. It can be converted into XP but it's not very efficient...
   Iron_XP_Recipe_1:
     name: Craft XP Bottles 1
-    production_time: 10
+    production_time: 20
     inputs:
       Bread:
         material: BREAD
-        amount: 640
+        amount: 1280
       Netherwart:
         material: NETHER_STALK 
-        amount: 320
+        amount: 352
       Baked Potato:
         material: BAKED_POTATO
         amount: 640
       Glass Bottle:
         material: GLASS_BOTTLE
-        durability: 16
-        amount: 18
+        amount: 16
     outputs:
       Exp Bottle:
         materials: EXP_BOTTLE
         amount: 18
   Iron_XP_Recipe_2:
     name: Craft XP Bottles 2
-    production_time: 10
+    production_time: 20
     inputs:
       Rations:
         material: MUSHROOM_SOUP
@@ -7649,7 +7648,7 @@ production_recipes:
         lore: An item used to create a Bastion Block
       Carrots:
         material: CARROT
-        amount: 512
+        amount: 576
       Sugar:
         material: SUGAR
         amount: 640
@@ -7662,7 +7661,7 @@ production_recipes:
         amount: 13
   Iron_XP_Recipe_3:
     name: Craft XP Bottles 3
-    production_time: 10
+    production_time: 20
     inputs:
       Cactus:
         material: CACTUS
@@ -7699,7 +7698,7 @@ production_recipes:
       Pumpkin Pie:
         material: PUMPKIN_PIE
         amount: 64
-      Compact Ice:
+      Ice:
         material: ICE
         amount: 256
       Acacia Wood:
@@ -7772,7 +7771,10 @@ production_recipes:
     outputs:
       Emerald Block:
         materials: EMERALD_BLOCK
-        amount: 35
+        amount: 30
+      Bucket:
+        materials: BUCKET
+        amount: 16
   Convert_Diamond_Crate:
     name: Convert Diamond Crate into XP
     production_time: 10
