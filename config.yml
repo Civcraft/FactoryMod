@@ -7451,9 +7451,9 @@ production_recipes:
       Raw Potato:
         material: POTATO
         amount: 1600
-      Dirt:
-        material: DIRT
-        amount: 384
+      Gravel:
+        material: GRAVEL
+        amount: 192
     outputs:
       Wood Crate:
         material: STORAGE_MINECART
@@ -7476,9 +7476,9 @@ production_recipes:
         material: LOG
         durability: 0
         amount: 192
-      Dirt:
-        material: DIRT
-        amount: 384
+      Gravel:
+        material: GRAVEL
+        amount: 192
     outputs:
       Wood Crate:
         material: STORAGE_MINECART
@@ -7496,9 +7496,9 @@ production_recipes:
       Carrot:
         material: CARROT
         amount: 640
-      Dirt:
-        material: DIRT
-        amount: 384
+      Gravel:
+        material: GRAVEL
+        amount: 192
     outputs:
       Wood Crate:
         material: STORAGE_MINECART
@@ -7691,7 +7691,7 @@ production_recipes:
         lore: Processed market supplies. It can be converted into XP but it's not very efficient...
       Golden Carrot:
         material: GOLDEN_CARROT
-        amount: 64
+        amount: 32
       Mycelium:
         material: MYCEL
         amount: 128
@@ -7761,7 +7761,7 @@ production_recipes:
         amount: 192
       Bucket of Lava:
         material: LAVA_BUCKET
-        amount: 16
+        amount: 4
       Obsidian:
         material: OBSIDIAN
         amount: 384
@@ -7771,10 +7771,10 @@ production_recipes:
     outputs:
       Emerald Block:
         materials: EMERALD_BLOCK
-        amount: 30
+        amount: 35
       Bucket:
         materials: BUCKET
-        amount: 16
+        amount: 4
   Convert_Diamond_Crate:
     name: Convert Diamond Crate into XP
     production_time: 10
