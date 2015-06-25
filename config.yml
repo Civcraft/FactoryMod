@@ -7453,7 +7453,7 @@ production_recipes:
         amount: 1600
       Gravel:
         material: GRAVEL
-        amount: 192
+        amount: 128
     outputs:
       Wood Crate:
         material: STORAGE_MINECART
@@ -7478,7 +7478,7 @@ production_recipes:
         amount: 192
       Gravel:
         material: GRAVEL
-        amount: 192
+        amount: 128
     outputs:
       Wood Crate:
         material: STORAGE_MINECART
@@ -7498,7 +7498,7 @@ production_recipes:
         amount: 640
       Gravel:
         material: GRAVEL
-        amount: 192
+        amount: 128
     outputs:
       Wood Crate:
         material: STORAGE_MINECART
@@ -7701,7 +7701,7 @@ production_recipes:
       Ice:
         material: ICE
         amount: 256
-      Acacia Wood:
+      Acacia Logs:
         material: LOG_2
         durability: 0
         amount: 320
