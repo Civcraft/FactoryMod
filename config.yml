@@ -2456,6 +2456,9 @@ production_factories:
         amount: 256
         durability: 4
     recipes:
+      - Smelt_Diorite
+      - Smelt_Granite
+      - Smelt_Andesite
       - Smelt_Prismarine
       - Smelt_Prismarine_Bricks
       - Smelt_Dark_Prismarine
@@ -10952,3 +10955,48 @@ production_recipes:
         Emerald Blocks:
           material: EMERALD_BLOCK
           amount: 84
+ Smelt_Diorite:
+    name: Smelt Diorite
+    production_time: 16
+    inputs:
+      Cobblestone:
+        material: COBBLESTONE
+        amount: 64
+      Flint:
+        material: FLINT
+        amount: 64
+    outputs:
+      Diorite:
+        material: STONE
+        amount: 64
+        durability: 3
+ Smelt_Granite:
+    name: Smelt Granite
+    production_time: 16
+    inputs:
+      Cobblestone:
+        material: COBBLESTONE
+        amount: 64
+      Flint:
+        material: FLINT
+        amount: 128
+    outputs:
+      Granite:
+        material: STONE
+        amount: 64
+        durability: 1
+ Smelt_Andesite:
+    name: Smelt Andesite
+    production_time: 16
+    inputs:
+      Cobblestone:
+        material: COBBLESTONE
+        amount: 96
+      Flint:
+        material: FLINT
+        amount: 64
+    outputs:
+      Andesite:
+        material: STONE
+        amount: 64
+        durability: 5
