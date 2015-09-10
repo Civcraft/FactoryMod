@@ -1,4 +1,4 @@
-#Example: Production_general
+#Example: production_general
 # update_cycle: 20 the period of ticks between which factories are updated
 # maintenance_cycle: 15 the period of ticks between which the maintenance of the factories are updated
 # maintenance_rate: 1 %Modifies the rate at which factories degrade, higher numbers degrade the factories faster
@@ -79,9 +79,9 @@ repair_factory:
       amount: 1
       durability: 1
   fuel_time: 5
-  name: 'Reset Factory'
-  production_time: 10
-  reset_level: 1
+  repair_multiple: 10
+  name: 'Repair Factory'
+  production_time: 20
   costs:
     construction:
       Coal Ore:
@@ -89,37 +89,24 @@ repair_factory:
         amount: 256
       Iron Ore:
         material: 'IRON_ORE'
-        amount: 16
+        amount: 8
       Redstone Ore:
         material: 'REDSTONE_ORE'
-        amount: 16
-      Diamond Ore:
-        material: 'DIAMOND_ORE'
-        amount: 16
-      Emerald Blocks:
-        material: 'EMERALD_BLOCK'
-        amount: 16
-    repair_multiple: 2
+        amount: 8
+      Gold Ore:
+        material: 'GOLD_ORE'
+        amount: 8
     repair:
       Coal Ore:
         material: 'COAL_ORE'
-        amount: 10
-      Iron Ore:
-        material: 'IRON_ORE'
-        amount: 1
-      Redstone Ore:
-        material: 'REDSTONE_ORE'
-        amount: 1
-      Diamond Ore:
-        material: 'DIAMOND_ORE'
-        amount: 1
-      Emerald Blocks:
-        material: 'EMERALD_BLOCK'
-        amount: 1
+        amount: 3
     recipe:
+      Coal Ore:
+        material: 'COAL_ORE'
+        amount: 64
       Emerald Blocks:
         material: 'EMERALD_BLOCK'
-        amount: 7
+        amount: 8
   repairable:
     WOODEN_PICKAXE:
       material: WOOD_PICKAXE
@@ -223,53 +210,19 @@ compactor:
       material: 'COAL'
       amount: 1
       durability: 1
-  fuel_time: 1
+  fuel_time: 5
+  repair_multiple: 1
   name: 'Compactor'
-  production_time: 1
+  production_time: 20
   costs:
     construction:
-      Crate:
-        material: CHEST
+      DIAMOND:
+        material: 'DIAMOND_BLOCK'
         amount: 64
-        display_name: Crate
-        lore: A crate for compacting items
-      'Redstone Blocks':
-        material: REDSTONE_BLOCK
-        amount: 16
-      Piston:
-        material: PISTON_BASE
-        amount: 192
-      'Iron Ingots':
-        material: IRON_INGOT
-        amount: 64
-      'Diamonds':
-        material: DIAMOND
-        amount: 48
-      'Slime Balls':
-        material: SLIME_BALL
-        amount: 24
-    repair_multiple: 3
     repair:
-      Crate:
-        material: CHEST
-        amount: 2
-        display_name: Crate
-        lore: A crate for compacting items
-      Redstone:
-        material: REDSTONE
-        amount: 4
-      Piston:
-        material: PISTON_BASE
-        amount: 6
-      'Diamonds':
-        material: DIAMOND
-        amount: 2
-      'Iron Ingots':
-        material: IRON_INGOT
-        amount: 2
-      'Slime Balls':
-        material: SLIME_BALL
-        amount: 1
+      EMERALD:
+        material: 'EMERALD_BLOCK'
+        amount: 16
     recipe:
       CRATE:
         material: 'CHEST'
@@ -277,25 +230,6 @@ compactor:
         display_name: Crate
         lore: A crate for compacting items
   compact_lore: Compacted Item
-  continuous: true
-  specific_exclusions:
-  excluded_types:
-    Written Book:
-      material: WRITTEN_BOOK
-    Book:
-      material: BOOK
-    Book and Quill:
-      material: BOOK_AND_QUILL
-    Enchanted Book:
-      material: ENCHANTED_BOOK
-    Paper:
-      material: PAPER
-    Map:
-      material: EMPTY_MAP
-    Filled Map:
-      material: MAP
-    Banner:
-      material: BANNER
 copy_defaults: false
 general:
   central_block: WORKBENCH
@@ -304,6 +238,8 @@ general:
   citadel_enabled: true
   factory_interaction_material: STICK
   disable_experience: true
+  should_default_anvil_cost: false
+  set_default_anvil_cost: 37
 production_general:
   update_cycle: 20
   repair_period: 28
@@ -419,6 +355,55 @@ crafting:
         Exp Bottle:
           material: EXP_BOTTLE
           amount: 9
+    Stone to Double Slab:
+      inputs:
+        s:
+         Stone:
+           material: STONE
+      shape:
+        - sss
+        - sss
+      output:
+        Double Stone Slab:
+          material: DOUBLE_STEP
+    Slab to Double Slab:
+      inputs:
+        s:
+         Stone Slab:
+           material: STEP
+      shape:
+        - s
+        - s
+      output:
+        Double Stone Slab:
+          material: DOUBLE_STEP
+    Slab to Smooth Double Stone Slab:
+      inputs:
+        s:
+          Stone Slab:
+            material: STEP
+      shape:
+        - ss
+        - ss
+      output:
+        Smooth Slab:
+          material: DOUBLE_STEP
+          durability: 8
+          amount: 2
+    Sandstone Slab to Smooth Double Sandstone Slab:
+      inputs:
+        s:
+          Sandstone Slab:
+            material: STEP
+            durability: 1
+      shape:
+        - ss
+        - ss
+      output:
+        Smooth Double Sandstone Slab:
+          material: DOUBLE_STEP
+          durability: 9
+          amount: 2
 production_factories:
   Bakery:
     name: Bakery
@@ -836,10 +821,12 @@ production_factories:
         material: COAL
         durability: 1
     inputs:
-      Bedrock:
-        material: BEDROCK
-        amount: 3456
-        lore: 'Admin Crimes Only'     
+      Iron Block:
+        material: IRON_BLOCK
+        amount: 64   
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 64   
     recipes:
       - Nether_Craft_Crate_of_Acacia_Sapling
       - Nether_Craft_Crate_of_Baked_Potatoes
@@ -868,12 +855,14 @@ production_factories:
       - Nether_Craft_Crate_of_Vine
       - Nether_Craft_Crate_of_Wheat
       - Nether_Craft_Crate_of_Yellow_Flower
-    repair_multiple: 54
+    repair_multiple: 3
     repair_inputs:
-      Bedrock:
-        material: BEDROCK
-        amount: 64
-        lore: 'Admin Crimes Only'
+      Iron Block:
+        material: IRON_BLOCK
+        amount: 2   
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 2
   Nether_Decompactor:
     name: Nether Decompactor
     fuel: 
@@ -881,10 +870,12 @@ production_factories:
         material: COAL
         durability: 1
     inputs:
-      Bedrock:
-        material: BEDROCK 
-        amount: 64
-        lore: 'Admin Crimes Only'
+      Diamonds:
+        material: DIAMOND
+        amount: 64   
+      Emeralds Blocks:
+        material: EMERALD_BLOCK
+        amount: 128   
     recipes:
       - Nether_Decraft_Crate_of_Acacia_Sapling
       - Nether_Decraft_Crate_of_Baked_Potatoes
@@ -913,12 +904,14 @@ production_factories:
       - Nether_Decraft_Crate_of_Vine
       - Nether_Decraft_Crate_of_Wheat
       - Nether_Decraft_Crate_of_Yellow_Flower
-    repair_multiple: 54
+    repair_multiple: 6
     repair_inputs:
-      Bedrock:
-        material: BEDROCK
-        amount: 64
-        lore: 'Admin Crimes Only'
+      Diamonds:
+        material: DIAMOND
+        amount: 1
+      Emerald Blocks:
+        material: EMERALD_BLOCK
+        amount: 2
   Diamond_Cauldron:
     name: Diamond Cauldron
     fuel:
@@ -1164,11 +1157,11 @@ production_factories:
         amount: 32  
     recipes:
       - Create_Iron_Sword
-    repair_multiple: 3
+    repair_multiple: 2
     repair_inputs:
       Iron Blocks:
         material: IRON_BLOCK
-        amount: 1
+        amount: 3  
   Random_Diamond_Tool_Factory:
     name: Random Diamond Tool Factory
     fuel: 
@@ -1183,10 +1176,11 @@ production_factories:
       - Create_Diamond_Axe
       - Create_Diamond_Pickaxe
       - Create_Diamond_Spade
-    repair_multiple: 9
+    repair_multiple: 2
     repair_inputs:
       Emerald Blocks:
         material: EMERALD_BLOCK
+        amount: 9  
   Random_Diamond_Armor_Factory:
     name: Random Diamond Armor Factory
     fuel: 
@@ -1202,10 +1196,11 @@ production_factories:
       - Create_Diamond_Boots
       - Create_Diamond_Chestplate
       - Create_Diamond_Helmet
-    repair_multiple: 6
+    repair_multiple: 2
     repair_inputs:
       Emerald Blocks:
         material: EMERALD_BLOCK
+        amount: 6 
   Random_Diamond_Weapon_Factory:
     name: Random Diamond Weapon Factory
     fuel: 
@@ -1219,10 +1214,11 @@ production_factories:
     recipes:
       - Create_Bow
       - Create_Diamond_Sword
-    repair_multiple: 3
+    repair_multiple: 2
     repair_inputs:
       Emerald Blocks:
         material: EMERALD_BLOCK
+        amount: 3  
   Sword_Enchantment_Factory:
     name: Sword Enchantment Factory
     fuel:
@@ -1240,13 +1236,14 @@ production_factories:
       - Enchant_Sharpness
       - Enchant_Fire_Aspect
       - Enchant_Looting
+      - Enchant_Bane_Of_Arthropods
     repair_multiple: 10
     repair_inputs:
-      Diamonds:
-        material: DIAMOND
+      Diamond Block:
+        material: DIAMOND_BLOCK
         amount: 3  
-      Emeralds:
-        material: EMERALD
+      Emerald Block:
+        material: EMERALD_BLOCK
         amount: 6  
   Armour_Enchantment_Factory:
     name: Armour Enchantment Factory
@@ -1272,11 +1269,11 @@ production_factories:
       - Enchant_U3_Helmet
     repair_multiple: 10
     repair_inputs:
-      Diamonds:
-        material: DIAMOND
+      Diamond Block:
+        material: DIAMOND_BLOCK
         amount: 6  
-      Emeralds:
-        material: EMERALD
+      Emerald Block:
+        material: EMERALD_BLOCK
         amount: 9  
   Tool_Enchantment_Factory:
     name: Tool Enchantment Factory
@@ -1306,11 +1303,11 @@ production_factories:
       - Enchant_Spades_F3
     repair_multiple: 10
     repair_inputs:
-      Diamonds:
-        material: DIAMOND
+      Diamond Block:
+        material: DIAMOND_BLOCK
         amount: 9  
-      Emeralds:
-        material: EMERALD
+      Emerald Block:
+        material: EMERALD_BLOCK
         amount: 12
   Glass_Smelter:
     name: Glass Smelter
@@ -1332,7 +1329,6 @@ production_factories:
       - Smelt_Glass_Panes
       - Smelt_Bottles
       - Smelt_Red_Sand
-      - Smelt_Red_Sandstone
       - Smelt_Glass_From_Sandstone
     repair_multiple: 26
     repair_inputs:
@@ -1384,7 +1380,6 @@ production_factories:
       - Bake_clay_blocks
       - Bake_bricks
       - Bake_pots
-      - Bake_brick_blocks
     repair_multiple: 26
     repair_inputs:
       Clay:
@@ -1708,8 +1703,6 @@ production_factories:
       - Grilled_Pork
       - Cooked_Beef
       - Cook_Salmon
-      - Cook_Mutton
-      - Cook_Rabbit
       - Bastion_Rations
     repair_multiple: 2
     repair_inputs:
@@ -2360,7 +2353,6 @@ production_factories:
       - Craft_Item_Frames
       - Craft_Bookshelfs
       - Bastion_Framing
-      - Craft_Crate
     repair_multiple: 10
     repair_inputs:
       Paper:
@@ -2444,33 +2436,6 @@ production_factories:
         amount: 2
       Diamond:
         material: DIAMOND
-  Igneous_Stone_Smelter:
-    name: Igneous Stone smelter
-    fuel:
-      Charcoal:
-        material: COAL
-        durability: 1
-    inputs:
-      Stone:
-        material: STONE
-        amount: 2048
-        durability: 0
-      Quartz:
-        material: QUARTZ
-        amount: 1024
-    recipes:
-      - Smelt_Granite
-      - Smelt_Diorite
-      - Smelt_Andesite
-    repair_multiple: 10
-    repair_inputs:
-      Stone:
-        material: STONE
-        amount: 20
-        durability: 0
-      Quartz:
-        material: QUARTZ
-        amount: 10
   Stone_Brick_Smelter:
     name: Fancy Stone Brick Smelter
     fuel:
@@ -2490,6 +2455,7 @@ production_factories:
       - Smelt_Prismarine_Bricks
       - Smelt_Dark_Prismarine
       - Smelt_Cracked_Stone_Brick
+      - Craft_Sea_Lanterns
       - Smelt_Mossy_Stone_Brick
       - Smelt_Chiseled_Stone_Brick
       - Bastion_Flooring
@@ -3402,7 +3368,7 @@ production_recipes:
         amount: 512
       Melon Block:
         material: MELON_BLOCK
-        amount: 4
+        amount: 64
       Brown Mushroom:
         material: BROWN_MUSHROOM
         amount: 128
@@ -3418,7 +3384,7 @@ production_recipes:
         amount: 128
       Sugar Cane:
         material: SUGAR_CANE
-        amount: 32
+        amount: 512
       Yellow Flower:
         material: YELLOW_FLOWER
         amount: 32
@@ -3428,11 +3394,11 @@ production_recipes:
         durability: 0
       Jungle Sapling:
         material: SAPLING
-        amount: 6
+        amount: 8
         durability: 3
       Acacia Sapling:
         material: SAPLING
-        amount: 12
+        amount: 8
         durability: 4
     outputs:
       Emerald Block:
@@ -3765,14 +3731,14 @@ production_recipes:
         amount: 512
       Cactus:
         material: CACTUS
-        amount: 16
+        amount: 256
       Cocoa:
         material: INK_SACK
         amount: 64
         durability: 3
       Melon Block:
         material: MELON_BLOCK
-        amount: 4
+        amount: 64
     outputs:
       XP Bottles:
         material: EXP_BOTTLE
@@ -4145,28 +4111,6 @@ production_recipes:
     outputs:
       Cooked Chicken:
         material: COOKED_CHICKEN
-        amount: 128
-  Cook_Mutton:
-    name: Grill Raw Mutton
-    production_time: 6
-    inputs:
-      Raw Mutton:
-        material: MUTTON
-        amount: 64
-    outputs:
-      Cooked Mutton:
-        material: COOKED_MUTTON
-        amount: 128
-  Cook_Rabbit:
-    name: Grill Raw Rabbit
-    production_time: 6
-    inputs:
-      Raw Rabbit:
-        material: RABBIT
-        amount: 64
-    outputs:
-      Cooked Rabbit:
-        material: COOKED_RABBIT
         amount: 128
   Dye_Brown_Wool_Pink:
     name: Dye Brown Wool Pink
@@ -4675,13 +4619,13 @@ production_recipes:
         amount: 256
       Cactus:
         material: CACTUS
-        amount: 32
+        amount: 512
       Wheat:
         material: WHEAT
         amount: 384
       Pumpkin:
         material: PUMPKIN
-        amount: 16
+        amount: 256
       Grass:
         material: LONG_GRASS
         amount: 128
@@ -4705,11 +4649,11 @@ production_recipes:
         durability: 1
       Spruce Sapling:
         material: SAPLING
-        amount: 10
+        amount: 8
         durability: 1
       Dark Oak Sapling:
         material: SAPLING
-        amount: 4
+        amount: 8
         durability: 5
     outputs:
       Emerald Block:
@@ -4729,13 +4673,13 @@ production_recipes:
         amount: 512
       Sugar Cane:
         material: SUGAR_CANE
-        amount: 32
+        amount: 512
       Grass Blocks:
         material: GRASS
         amount: 32
       Pumpkin:
         material: PUMPKIN
-        amount: 16
+        amount: 256
       Nether Wart:
         material: NETHER_STALK
         amount: 128
@@ -4747,7 +4691,7 @@ production_recipes:
         amount: 128
       Melon Block:
         material: MELON_BLOCK
-        amount: 4
+        amount: 64
       Yellow Flower:
         material: YELLOW_FLOWER
         amount: 32
@@ -5067,7 +5011,7 @@ production_recipes:
         material: HARD_CLAY
         amount: 1024
   Bake_bricks:
-    name: Bake Individual Bricks
+    name: Bake Bricks
     production_time: 32
     inputs:
       Clay:
@@ -5088,17 +5032,6 @@ production_recipes:
       Flower Pots:
         material: FLOWER_POT_ITEM
         amount: 64
-  Bake_brick_blocks:
-    name: Bake brick blocks
-    production_time: 32
-    inputs:
-      Clay:
-        material: CLAY
-        amount: 128
-    outputs:
-      Brick blocks:
-        material: BRICK
-        amount: 256
   Smelt_Sandstone:
     name: Smelt Sandstone
     production_time: 32
@@ -5144,19 +5077,6 @@ production_recipes:
         material: SAND
         amount: 64
         durability: 1
-  Smelt_Red_Sandstone:
-    name: Smelt Red Sandstone
-    production_time: 32
-    inputs:
-      Red Sand:
-        material: SAND
-        amount: 512
-        durability: 1
-    outputs:
-      Red Sandstone:
-        material: RED_SANDSTONE
-        amount: 384
-        durability: 0
   Smelt_Glass_From_Sandstone:
     name: Smelt Glass From Sandstone
     production_time: 32
@@ -5528,10 +5448,10 @@ production_recipes:
         amount: 256
       Sugar Cane:
         material: SUGAR_CANE
-        amount: 16
+        amount: 256
       Pumpkin:
         material: PUMPKIN
-        amount: 8
+        amount: 128
     outputs:
       XP Bottles:
         material: EXP_BOTTLE
@@ -5547,14 +5467,14 @@ production_recipes:
         amount: 256
       Cactus:
         material: CACTUS
-        amount: 16
+        amount: 256
       Cocoa:
         material: INK_SACK
         amount: 64
         durability: 3
       Pumpkin:
         material: PUMPKIN
-        amount: 8
+        amount: 128
     outputs:
       XP Bottles:
         material: EXP_BOTTLE
@@ -5573,10 +5493,10 @@ production_recipes:
         amount: 256
       Sugar Cane:
         material: SUGAR_CANE
-        amount: 16
+        amount: 256
       Melon Block:
         material: MELON_BLOCK
-        amount: 4
+        amount: 64
     outputs:
       XP Bottles:
         material: EXP_BOTTLE
@@ -6580,14 +6500,14 @@ production_recipes:
         amount: 4
         lore: Donkey double chest
   Craft_Fences:
-    name: Craft Oak Fences
+    name: Craft Fences
     production_time: 16
     inputs:
       Chest:
         material: CHEST
         amount: 12
     outputs:
-      Oak Fence:
+      Fence:
         material: FENCE
         amount: 256
   Craft_Signs:
@@ -6726,7 +6646,7 @@ production_recipes:
     inputs:
       Iron Ingot:
         material: IRON_INGOT
-        amount: 18
+        amount: 54
     outputs:
       Iron Door:
         material: IRON_DOOR
@@ -7719,51 +7639,6 @@ production_recipes:
         material: MONSTER_EGG
         durability: 56
         amount: 4
-  Smelt_Diorite:
-    name: Smelt Diorite
-    production_time: 32
-    inputs:
-      Cobblestone:
-        material: COBBLESTONE
-        amount: 576
-      Quartz:
-        material: QUARTZ
-        amount: 192
-    outputs:
-      Diorite:
-        material: STONE
-        amount: 576
-        durability: 3
-  Smelt_Granite:
-    name: Smelt Granite
-    production_time: 32
-    inputs:
-      Cobblestone:
-        material: COBBLESTONE
-        amount: 512
-      Quartz:
-        material: QUARTZ
-        amount: 256
-    outputs:
-      Granite:
-        material: STONE
-        amount: 512
-        durability: 1
-  Smelt_Andesite:
-    name: Smelt Andesite
-    production_time: 32
-    inputs:
-      Cobblestone:
-        material: COBBLESTONE
-        amount: 1024
-      Quartz:
-        material: QUARTZ
-        amount: 64
-    outputs:
-      Andesite:
-        material: STONE
-        amount: 512
-        durability: 5
   Compact_Ice:
     name: Compact Ice
     production_time: 32
@@ -7921,9 +7796,9 @@ production_recipes:
   Bastion_Flooring:
     name: Flooring
     inputs:
-      Clay Block:
-        material: CLAY
-        amount: 8
+      Clay Ball:
+        material: CLAY_BALL
+        amount: 32
       Nether Brick:
         material: NETHER_BRICK
         amount: 64
@@ -8281,22 +8156,6 @@ production_recipes:
       Sea Lantern:
         material: SEA_LANTERN
         amount: 16
-  Craft_Crate:
-    name: Craft Compactor Crate
-    production_time: 4
-    inputs:
-      Chest:
-        material: CHEST
-        amount: 39
-      'Iron Ingot':
-        material: IRON_INGOT
-        amount: 4
-    outputs:
-      Crate:
-        material: CHEST
-        amount: 54
-        display_name: Crate
-        lore: A crate for compacting items
   Enchant_Sharpness:
     name: Enchant With Sharpness 5.
     production_time: 10
@@ -8351,6 +8210,24 @@ production_recipes:
       Looting:
         type: LOOT_BONUS_MOBS
         level: 3
+  Enchant_Bane_Of_Arthropods:
+    name: Enchant With Bane of Arthropods 5.
+    production_time: 10
+    inputs:
+      Diamond Sword:
+        material: DIAMOND_SWORD
+        amount: 5
+      Emerald Block:
+        material: EMERALD_BLOCK
+        amount: 50
+    outputs:
+      Diamond Sword:
+        material: DIAMOND_SWORD
+        amount: 5
+    enchantments:
+      Bane of Arthropods 5:
+        type: DAMAGE_ARTHROPODS
+        level: 5
   Enchant_P4_Chest:
     name: Enchant Chest with Prot 4
     production_time: 40
@@ -8517,7 +8394,7 @@ production_recipes:
     name: Enchant Spade with Efficiency 5
     production_time: 10
     inputs:
-      Diamond Spade:
+      Diamond Pick:
         material: DIAMOND_SPADE
         amount: 5
       Emerald Block:
@@ -8571,7 +8448,7 @@ production_recipes:
     name: Enchant Spade with Unbreaking 3
     production_time: 10
     inputs:
-      Diamond Spade:
+      Diamond Pick:
         material: DIAMOND_SPADE
         amount: 5
       Emerald Block:
@@ -8625,7 +8502,7 @@ production_recipes:
     name: Enchant Spade with Silk Touch
     production_time: 10
     inputs:
-      Diamond Spade:
+      Diamond Pick:
         material: DIAMOND_SPADE
         amount: 5
       Emerald Block:
@@ -8679,7 +8556,7 @@ production_recipes:
     name: Enchant Spade with Fortune 3
     production_time: 10
     inputs:
-      Diamond Spade:
+      Diamond Pick:
         material: DIAMOND_SPADE
         amount: 5
       Emerald Block:
@@ -8729,7 +8606,7 @@ production_recipes:
     name: Craft Crate of Fish
     production_time: 4
     inputs: 
-       Cooked Fish:
+       Fish:
          material: COOKED_FISH
          amount: 1024
     outputs:
@@ -8785,7 +8662,7 @@ production_recipes:
     name: Craft Crate of Baked Potatoes
     production_time: 4
     inputs: 
-       Baked Potato:
+       Potato:
          material: BAKED_POTATO
          amount: 1024
     outputs:
@@ -8842,7 +8719,7 @@ production_recipes:
     name: Craft Crate of Cacti
     production_time: 4
     inputs: 
-       Cactus:
+       Catus:
          material: CACTUS
          amount: 1024
     outputs:
@@ -9123,7 +9000,7 @@ production_recipes:
          display_name: Crate of Fish
          lore: Crate of Fish
     outputs: 
-       Cooked Fish:
+       Fish:
          material: COOKED_FISH
          amount: 1024
   Nether_Decraft_Crate_of_Sugar_Cane:
@@ -9179,7 +9056,7 @@ production_recipes:
          display_name: Crate of Potatoes
          lore: Crate of Potatoes
     outputs: 
-       Baked Potato:
+       Potato:
          material: BAKED_POTATO
          amount: 1024
   Nether_Decraft_Crate_of_Carrots:
@@ -9236,7 +9113,7 @@ production_recipes:
          display_name: Crate of Cacti
          lore: Crate of Cacti
     outputs: 
-       Cactus:
+       Catus:
          material: CACTUS
          amount: 1024
   Nether_Decraft_Crate_of_Bread:
@@ -9499,9 +9376,6 @@ production_recipes:
       Enchanted Diamond Axe:
         material: DIAMOND_AXE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9541,9 +9415,6 @@ production_recipes:
       Enchanted Diamond Pickaxe:
         material: DIAMOND_PICKAXE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9583,9 +9454,6 @@ production_recipes:
       Enchanted Diamond Spade:
         material: DIAMOND_SPADE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9625,9 +9493,6 @@ production_recipes:
       Enchanted Iron Axe:
         material: IRON_AXE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9667,9 +9532,6 @@ production_recipes:
       Enchanted Iron Pickaxe:
         material: IRON_PICKAXE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9709,9 +9571,6 @@ production_recipes:
       Enchanted Iron Spade:
         material: IRON_SPADE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9737,23 +9596,20 @@ production_recipes:
         type: LOOT_BONUS_BLOCKS
         level: 2
         probability: 0.36
-  Create_Wooden_Pickaxe:
-    name: Create Wooden Pickaxe
+  Create_Wooden_Axe:
+    name: Create Wooden_Axe
     production_time: 40
     inputs:
-      Wooden Pickaxe:
+      Wooden Axe:
         material: WOOD_PICKAXE
         amount: 1
       Emerald Blocks:
         material: EMERALD_BLOCK
         amount: 2
     outputs:
-      Enchanted Wooden Pickaxe:
+      Enchanted Wooden Axe:
         material: WOOD_PICKAXE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9780,7 +9636,7 @@ production_recipes:
         level: 2
         probability: 0.36
   Create_Wooden_Spade:
-    name: Create Wooden Spade
+    name: Create Wooded Spade
     production_time: 40
     inputs:
       Wooden Spade:
@@ -9793,9 +9649,6 @@ production_recipes:
       Enchanted Wooden Spade:
         material: WOOD_SPADE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9835,9 +9688,6 @@ production_recipes:
       Enchanted Wooden Axe:
         material: WOOD_AXE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Efficiency 4:
         type: DIG_SPEED
@@ -9877,9 +9727,6 @@ production_recipes:
       Enchanted Fishing Rod:
         material: FISHING_ROD
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -9915,9 +9762,6 @@ production_recipes:
       Enchanted Bow:
         material: BOW
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -9961,9 +9805,6 @@ production_recipes:
       Enchanted Diamond Sword:
         material: DIAMOND_SWORD
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10035,9 +9876,6 @@ production_recipes:
       Enchanted Diamond Leggings:
         material: DIAMOND_LEGGINGS
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10081,9 +9919,6 @@ production_recipes:
       Enchanted Diamond Boots:
         material: DIAMOND_BOOTS
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10096,7 +9931,7 @@ production_recipes:
       Feather Falling 4:
         type: PROTECTION_FALL
         level: 4
-        probability: 0.20
+        probability: 0.25
       Protection 4:
         type: PROTECTION_ENVIRONMENTAL
         level: 4
@@ -10117,11 +9952,6 @@ production_recipes:
         type: PROTECTION_EXPLOSIONS
         level: 4
         probability: 0.10
-      Depth Strider 3:
-        type: DEPTH_STRIDER
-        level: 3
-        probability: 0.05
-
   Create_Diamond_Chestplate:
     name: Create Diamond Chestplate
     production_time: 40
@@ -10136,9 +9966,6 @@ production_recipes:
       Enchanted Diamond Chestplate:
         material: DIAMOND_CHESTPLATE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10190,9 +10017,6 @@ production_recipes:
       Enchanted Diamond Helmet:
         material: DIAMOND_HELMET
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10248,9 +10072,6 @@ production_recipes:
       Enchanted Iron Sword:
         material: IRON_SWORD
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10322,9 +10143,6 @@ production_recipes:
       Enchanted Iron Leggings:
         material: IRON_LEGGINGS
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10368,9 +10186,6 @@ production_recipes:
       Enchanted Iron Boots:
         material: IRON_BOOTS
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10418,9 +10233,7 @@ production_recipes:
       Enchanted Iron Chestplate:
         material: IRON_CHESTPLATE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
+    enchantments:
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10472,9 +10285,6 @@ production_recipes:
       Enchanted Iron Helmet:
         material: IRON_HELMET
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10530,9 +10340,6 @@ production_recipes:
       Enchanted Wooden Sword:
         material: WOOD_SWORD
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10604,9 +10411,6 @@ production_recipes:
       Enchanted Leather Leggings:
         material: LEATHER_LEGGINGS
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10650,9 +10454,6 @@ production_recipes:
       Enchanted Leather Boots:
         material: LEATHER_BOOTS
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10700,9 +10501,6 @@ production_recipes:
       Enchanted Leather Chestplate:
         material: LEATHER_CHESTPLATE
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10754,9 +10552,6 @@ production_recipes:
       Enchanted Leather Helmet:
         material: LEATHER_HELMET
         amount: 1
-    enchantment_options:
-      safe_only: true
-      ensure_one: true
     enchantments:
       Unbreaking 3:
         type: DURABILITY
@@ -10822,8 +10617,8 @@ production_recipes:
       Endstone:
         material: ENDER_STONE
         amount: 16
-      Nether Wart:
-        material: NETHER_STALK
+      Nether Warts:
+        material: NETHER_WARTS
         amount: 25
       Glass Bottle:
         material: GLASS_BOTTLE
@@ -10837,7 +10632,7 @@ production_recipes:
     production_time: 80
     inputs:
       Carrot:
-        material: CARROT_ITEM
+        material: CARROT
         amount: 64
       Soul Sand:
         material: SOUL_SAND
@@ -10869,57 +10664,78 @@ production_recipes:
   Emerald_XP_0:
     name: Emerald XP Block 1
     inputs: 
-       Compacted Glass Bottles:
-         material: GLASS_BOTTLE
-         amount: 96
-         lore: Compacted Item
-       Compacted Carrots:
-         material: CARROT_ITEM
+       Crate of Glass Bottles:
+         material: WOOD
+         durability: 0
+         amount: 128
+         display_name: Crate of Glass Bottles
+         lore: Crate of Glass Bottles
+       Crate of Carrots:
+         material: WOOD
+         durability: 0
          amount: 256
-         lore: Compacted Item
-       Compacted Sugar Cane:
-         material: SUGAR_CANE
-         amount: 16
-         lore: Compacted Item
-       Compacted Bread:
-         material: BREAD
+         display_name: Crate of Carrots
+         lore: Crate of Carrots
+       Crate of Sugar Cane:
+         material: WOOD
+         durability: 0
+         amount: 256
+         display_name: Crate of Sugar Cane
+         lore: Crate of Sugar Cane
+       Crate of Bread:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Grass Blocks:
-         material: GRASS
+         display_name: Crate of Bread
+         lore: Crate of Bread
+       Crate of Grass Blocks:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Brown Mushrooms:
-         material: BROWN_MUSHROOM
+         display_name: Crate of Grass Blocks
+         lore: Crate of Grass Blocks
+       Crate of Brown Mushrooms:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Cocoa:
-         material: INK_SACK
-         durability: 3
+         display_name: Crate of Brown Mushrooms
+         lore: Crate of Brown Mushrooms
+       Crate of Cocoa:
+         material: WOOD
+         durability: 0
          amount: 32
-         lore: Compacted Item
-       Compacted Melons:
-         material: MELON_BLOCK
-         amount: 2
-         lore: Compacted Item
-       Compacted Yellow Flowers:
-         material: YELLOW_FLOWER
+         display_name: Crate of Cocoa
+         lore: Crate of Cocoa
+       Crate of Melons:
+         material: WOOD
+         durability: 0
+         amount: 32
+         display_name: Crate of Melons
+         lore: Crate of Melons
+       Crate of Yellow Flower:
+         material: WOOD
+         durability: 0
          amount: 16
-         lore: Compacted Item
-       Compacted Oak Sapling:
-         material: SAPLING
+         display_name: Crate of Yellow Flower
+         lore: Crate of Yellow Flower
+       Crate of Oak Sapling:
+         material: WOOD
+         durability: 0
          amount: 4
-         lore: Compacted Item
-       Compacted Jungle Sapling:
-         material: SAPLING
-         durability: 3
-         amount: 3
-         lore: Compacted Item
-       Compacted Acacia Sapling:
-         material: SAPLING
-         durability: 4
-         amount: 6
-         lore: Compacted Item
+         display_name: Crate of Oak Sapling
+         lore: Crate of Oak Sapling
+       Crate of Jungle Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Jungle Sapling
+         lore: Crate of Jungle Sapling
+       Crate of Acacia Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Acacia Sapling
+         lore: Crate of Acacia Sapling
     outputs:
         Emerald Blocks:
           material: EMERALD_BLOCK
@@ -10927,59 +10743,78 @@ production_recipes:
   Emerald_XP_1:
     name: Emerald XP Block 2
     inputs: 
-       Compacted Glass Bottles:
-         material: GLASS_BOTTLE
-         amount: 96
-         lore: Compacted Item
-       Compacted Cacti:
-         material: CACTUS
-         amount: 16
-         lore: Compacted Item
-       Compacted Wheat:
-         material: WHEAT
+       Crate of Glass Bottles:
+         material: WOOD
+         durability: 0
+         amount: 128
+         display_name: Crate of Glass Bottles
+         lore: Crate of Glass Bottles
+       Crate of Cacti:
+         material: WOOD
+         durability: 0
+         amount: 256
+         display_name: Crate of Cacti
+         lore: Crate of Cacti
+       Crate of Wheat:
+         material: WOOD
+         durability: 0
          amount: 192
-         lore: Compacted Item
-       Compacted Pumpkins:
-         material: PUMPKIN
-         amount: 8
-         lore: Compacted Item
-       Compacted Grass:
-         material: LONG_GRASS
-         durability: 1
+         display_name: Crate of Wheat
+         lore: Crate of Wheat
+       Crate of Pumpkins:
+         material: WOOD
+         durability: 0
+         amount: 128
+         display_name: Crate of Pumpkins
+         lore: Crate of Pumpkins
+       Crate of Grass Blocks:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Cocoa:
-         material: INK_SACK
-         durability: 3
+         display_name: Crate of Grass
+         lore: Crate of Grass
+       Crate of Cocoa:
+         material: WOOD
+         durability: 0
          amount: 32
-         lore: Compacted Item
-       Compacted Red Mushrooms:
-         material: RED_MUSHROOM
+         display_name: Crate of Cocoa
+         lore: Crate of Cocoa
+       Crate of Red Mushrooms:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Cooked Fish:
-         material: COOKED_FISH
+         display_name: Crate of Red Mushrooms
+         lore: Crate of Red Mushrooms
+       Crate of Fish:
+         material: WOOD
+         durability: 0
          amount: 8
-         lore: Compacted Item
-       Compacted Cooked Salmon:
-         material: COOKED_FISH
-         durability: 1
+         display_name: Crate of Fish
+         lore: Crate of Fish
+       Crate of Salmon:
+         material: WOOD
+         durability: 0
          amount: 4
-         lore: Compacted Item
-       Compacted Red Rose:
-         material: RED_ROSE
+         display_name: Crate of Salmon
+         lore: Crate of Salmon
+       Crate of Red Rose:
+         material: WOOD
+         durability: 0
          amount: 8
-         lore: Compacted Item
-       Compacted Spruce Sapling:
-         material: SAPLING
-         durability: 1
-         amount: 5
-         lore: Compacted Item
-       Compacted Dark Oak Sapling:
-         material: SAPLING
-         durability: 5
-         amount: 2
-         lore: Compacted Item
+         display_name: Crate of Red Rose
+         lore: Crate of Red Rose 
+       Crate of Spruce Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Spruce Sapling
+         lore: Crate of Spruce Sapling
+       Crate of Dark Oak Sapling:
+         material: WOOD
+         durability: 0
+         amount: 4
+         display_name: Crate of Dark Oak Sapling
+         lore: Crate of Dark Oak Sapling
     outputs:
         Emerald Blocks:
           material: EMERALD_BLOCK
@@ -10987,55 +10822,78 @@ production_recipes:
   Emerald_XP_2:
     name: Emerald XP Block 3
     inputs: 
-       Compacted Glass Bottles:
-         material: GLASS_BOTTLE
-         amount: 96
-         lore: Compacted Item
-       Compacted Cookies:
-         material: COOKIE
+       Crate of Glass Bottles:
+         material: WOOD
+         durability: 0
+         amount: 128
+         display_name: Crate of Glass Bottles
+         lore: Crate of Glass Bottles
+       Crate of Cookies:
+         material: WOOD
+         durability: 0
          amount: 384
-         lore: Compacted Item
-       Compacted Baked Potatoes:
-         material: BAKED_POTATO
+         display_name: Crate of Cookies
+         lore: Crate of Cookies
+       Crate of Potatoes:
+         material: WOOD
+         durability: 0
          amount: 256
-         lore: Compacted Item
-       Compacted Sugar Cane:
-         material: SUGAR_CANE
-         amount: 12
-         lore: Compacted Item
-       Compacted Pumpkins:
-         material: PUMPKIN
-         amount: 8
-         lore: Compacted Item
-       Compacted Nether Warts:
-         material: NETHER_STALK
+         display_name: Crate of Potatoes
+         lore: Crate of Potatoes
+       Crate of Sugar Cane:
+         material: WOOD
+         durability: 0
+         amount: 256
+         display_name: Crate of Sugar Cane
+         lore: Crate of Sugar Cane
+       Crate of Pumpkins:
+         material: WOOD
+         durability: 0
+         amount: 128
+         display_name: Crate of Pumpkins
+         lore: Crate of Pumpkins
+       Crate of Nether Warts:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Vine:
-         material: VINE
+         display_name: Crate of Nether Warts
+         lore: Crate of Nether Warts
+       Crate of Vine:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Melons:
-         material: MELON_BLOCK
-         amount: 2
-         lore: Compacted Item
-       Compacted Red Mushrooms:
-         material: RED_MUSHROOM
+         display_name: Crate of Vine
+         lore: Crate of Vine
+       Crate of Melons:
+         material: WOOD
+         durability: 0
+         amount: 32
+         display_name: Crate of Melons
+         lore: Crate of Melons
+       Crate of Red Mushrooms:
+         material: WOOD
+         durability: 0
          amount: 64
-         lore: Compacted Item
-       Compacted Yellow Flower:
-         material: YELLOW_FLOWER
+         display_name: Crate of Red Mushrooms
+         lore: Crate of Red Mushrooms
+       Crate of Yellow Flower:
+         material: WOOD
+         durability: 0
          amount: 16
-         lore: Compacted Item
-       Compacted Grass Blocks:
-         material: GRASS
+         display_name: Crate of Yellow Flower
+         lore: Crate of Yellow Flower
+       Crate of Grass:
+         material: WOOD
+         durability: 0
          amount: 16
-         lore: Compacted Item
-       Compacted Birch Sapling:
-         material: SAPLING
-         durability: 2
+         display_name: Crate of Grass Blocks
+         lore: Crate of Grass Blocks
+       Crate of Birch Sapling:
+         material: WOOD
+         durability: 0
          amount: 4
-         lore: Compacted Item
+         display_name: Crate of Birch Sapling
+         lore: Crate of Birch Sapling
     outputs:
         Emerald Blocks:
           material: EMERALD_BLOCK
