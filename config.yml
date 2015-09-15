@@ -2459,7 +2459,7 @@ production_factories:
       Redstone Blocks:
         material: REDSTONE_BLOCK
         amount: 3
-  Fancy_Ore_Smelter:
+  Gem_Extractor:
     name: Gem Extractor
     fuel:
       Charcoal:
