@@ -1362,6 +1362,7 @@ production_factories:
       - Enchant_U3_Legs
       - Enchant_U3_Boots
       - Enchant_U3_Helmet
+      - Enchant_FF_Boots
     repair_multiple: 10
     repair_inputs:
       Diamonds:
@@ -8671,6 +8672,24 @@ production_recipes:
       Unbreaking:
         type: DURABILITY
         level: 3
+  Enchant_FF_Boots:
+    name: Enchant Boots with Feather Falling 4
+    production_time: 40
+    inputs:
+      Diamond Boots:
+        material: DIAMIOND_BOOTS
+        amount: 5
+      Emerald Block:
+        material: EMERALD_BLOCK
+        amount: 20
+    outputs:
+      Diamond Boots:
+        material: DIAMOND_BOOTS
+        amount: 5
+    enchantments:
+      Feather Falling:
+        type: PROTECTION_FALL
+        level: 4
   Enchant_Picks_E5:
     name: Enchant Pick with Efficiency 5
     production_time: 10
