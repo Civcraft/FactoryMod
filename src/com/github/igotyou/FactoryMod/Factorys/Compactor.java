@@ -149,7 +149,12 @@ public class Compactor extends ABaseFactory {
                     cloneMeta.setLore(null);
                     clone.setItemMeta(cloneMeta);
                     outputs.add(clone); 
-                	
+
+                    // Refund crates based on a percentage. 1.0 = 100%, 0.0 == 0% based on random()'s [0,1) distribution.
+                    if (Math.random() < cp.getRefundChance()) {
+                        outputs.addAll(cp.getRecipeMaterials());
+                    }
+
                     return outputs;
                 }
             }
