@@ -23,6 +23,7 @@ public class CompactorProperties extends AFactoryProperties{
     private int repair;
     private double repairTime;
     private double productionTime;
+    private double refundChance;
     private String compactLore;
     private boolean continuous;
     
@@ -30,7 +31,7 @@ public class CompactorProperties extends AFactoryProperties{
     public CompactorProperties(ItemList<NamedItemStack> constructionMaterials,
             ItemList<NamedItemStack> fuel, ItemList<NamedItemStack> repairMaterials,
             ItemList<NamedItemStack> recipeMaterials, int energyTime, int repair, 
-            String name, double repairTime, double productionTime, String compactLore,
+            String name, double repairTime, double productionTime, double refundChance, String compactLore,
             boolean continuous, ItemList<NamedItemStack> specificExclusion, List<Material> generalExclusion) {
         this.constructionMaterials = constructionMaterials;
         this.fuel = fuel;
@@ -41,6 +42,7 @@ public class CompactorProperties extends AFactoryProperties{
         this.name = name;
         this.repairTime = repairTime;
         this.productionTime = productionTime;
+        this.refundChance = refundChance;
         this.compactLore = compactLore;
         this.continuous = continuous;
         this.specificExclusions = specificExclusion;
@@ -87,6 +89,10 @@ public class CompactorProperties extends AFactoryProperties{
         return productionTime;
     }
 
+    public double getRefundChance() {
+        return refundChance;
+    }
+
     public String getCompactLore() {
         return compactLore;
     }
@@ -112,6 +118,7 @@ public class CompactorProperties extends AFactoryProperties{
         String name = config.getString("name", "Compactor");
         int repairTime = config.getInt("repair_time", 12);
         int productionTime = config.getInt("production_time");
+        double refundChance = config.getDouble("refund_chance", 1.0);
         String compactLore = config.getString("compact_lore", "Compacted Item");
         boolean continuous = config.getBoolean("continuous", false);
 		Iterator<NamedItemStack> genExcludeIter = generalExclusion.iterator();
@@ -123,7 +130,7 @@ public class CompactorProperties extends AFactoryProperties{
 			generalExclude.add(exclude.getType());
 		}
 
-        return new CompactorProperties(constructionCost, cFuel, repairCost, recipeUse, energyTime, repair, name, repairTime, productionTime, compactLore, continuous, specificExclusion, generalExclude);
+        return new CompactorProperties(constructionCost, cFuel, repairCost, recipeUse, energyTime, repair, name, repairTime, productionTime, refundChance, compactLore, continuous, specificExclusion, generalExclude);
     }
 
 }

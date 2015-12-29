@@ -277,6 +277,7 @@ compactor:
         display_name: Crate
         lore: A crate for compacting items
   compact_lore: Compacted Item
+  refund_chance: 1.0
   continuous: true
   specific_exclusions:
   excluded_types:
