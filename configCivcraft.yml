@@ -3880,3 +3880,16 @@ recipes:
         material: WOOL
         amount: 256
     factory: Wool Processing
+  Burn_Charcoal_from_Logs_Basic:
+    type: PRODUCTION
+    name: Create Charcoal
+    production_time: 8s
+    input:
+      log:
+        material: LOG
+        durability: -1
+        amount: 16
+    output:
+      charcoal:
+        material: CHARCOAL
+        amount: 20
