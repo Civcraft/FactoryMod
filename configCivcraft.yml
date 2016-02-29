@@ -558,6 +558,9 @@ factories:
     type: FCCUPGRADE
     name: Basic Enchanter
     recipes:
+    - Enchant_Efficiency_Advanced
+    - Enchant_Unbreaking_Tool_Basic
+    - Enchant_Sharpness_Basic
     - Upgrade_to_Tool_Enchanter
     - Upgrade_to_Weapon_Enchanter
     - Upgrade_to_Armour_Enchanter
@@ -1992,7 +1995,7 @@ recipes:
         amount: 64
   Enchant_Efficiency_Basic:
     type: PRODUCTION
-    name: Enchant Efficiency
+    name: Enchant Efficiency level 1
     production_time: 5s
     input:
       diamond pickaxe:
@@ -2008,6 +2011,101 @@ recipes:
         enchants:
           efficiency:
             enchant: DIG_SPEED
+            level: 1
+  Enchant_Efficiency_Advanced:
+    type: PRODUCTION
+    name: Enchant Efficiency level 3
+    production_time: 5s
+    input:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+      emerald block:
+        material: EMERALD_BLOCK
+        amount: 2
+    output:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          efficiency:
+            enchant: DIG_SPEED
+            level: 3
+  Enchant_Efficiency_Expert:
+    type: PRODUCTION
+    name: Enchant Efficiency level 5
+    production_time: 5s
+    input:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+      emerald block:
+        material: EMERALD_BLOCK
+        amount: 4
+    output:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
+  Enchant_Unbreaking_Tool_Basic:
+    type: PRODUCTION
+    name: Enchant Unbreaking level 1
+    production_time: 5s
+    input:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+      emerald:
+        material: EMERALD
+        amount: 16
+    output:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 1
+  Enchant_Unbreaking_Tool_Expert:
+    type: PRODUCTION
+    name: Enchant Unbreaking level 5
+    production_time: 5s
+    input:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+      emerald block:
+        material: EMERALD_BLOCK
+        amount: 5
+    output:
+      diamond pickaxe:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+  Enchant_Sharpness_Basic:
+    type: PRODUCTION
+    name: Enchant Sharpness level 1
+    production_time: 5s
+    input:
+      diamond sword:
+        material: DIAMOND_SWORD
+        amount: 1
+      emerald:
+        material: EMERALD
+        amount: 8
+    output:
+      diamond sword:
+        material: DIAMOND_SWORD
+        amount: 1
+        enchants:
+          efficiency:
+            enchant: DAMAGE_ALL
             level: 1
   Extract_Diamonds:
     type: PRODUCTION
