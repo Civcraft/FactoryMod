@@ -3860,7 +3860,7 @@ recipes:
         amount: 32
     factory: Weapon Enchanter
   Upgrade_to_Wood_Processor:
-    production_time: 300s
+    production_time: 30s
     type: UPGRADE
     name: Upgrade to Wood Processor
     fuel_consumption_intervall: 3s
