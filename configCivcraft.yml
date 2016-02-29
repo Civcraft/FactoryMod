@@ -3840,7 +3840,7 @@ recipes:
   Burn_Charcoal_from_Logs_Basic:
     type: PRODUCTION
     name: Create Charcoal
-    production_time: 5s
+    production_time: 8s
     input:
       log:
         material: LOG
@@ -3849,4 +3849,4 @@ recipes:
     output:
       charcoal:
         material: CHARCOAL
-        amount: 32
+        amount: 20
