@@ -921,7 +921,7 @@ recipes:
     output:
       cooked fish:
         material: COOKED_FISH
-        amount: 64
+        amount: 128
   Cook_Mutton:
     type: PRODUCTION
     name: Cook Mutton
