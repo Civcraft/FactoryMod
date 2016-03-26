@@ -13,6 +13,7 @@ import org.bukkit.block.Block;
 import org.bukkit.block.Chest;
 import org.bukkit.block.Furnace;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.DoubleChestInventory;
 import org.bukkit.inventory.FurnaceInventory;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -30,6 +31,7 @@ import com.github.igotyou.FactoryMod.recipes.Upgraderecipe;
 import com.github.igotyou.FactoryMod.repairManager.IRepairManager;
 import com.github.igotyou.FactoryMod.repairManager.PercentageHealthRepairManager;
 import com.github.igotyou.FactoryMod.structures.FurnCraftChestStructure;
+import com.github.igotyou.FactoryMod.structures.MultiBlockStructure;
 import com.github.igotyou.FactoryMod.utility.LoggingUtils;
 
 /**
@@ -77,7 +79,30 @@ public class FurnCraftChestFactory extends Factory {
 			return null;
 		}
 		Chest chestBlock = (Chest) (getChest().getState());
-		return chestBlock.getInventory();
+		Inventory inventory = chestBlock.getInventory();
+
+		/**
+		 * If the chest is a double chest and half of it is in a different chunk
+		 * chestBlock.getInventory() will only return the inventory of a single
+		 * chest. In this case we will scan all blocks next to the chest in
+		 * order to load the adjusted chunk and get the full inventory of the
+		 * chest.
+		 **/
+		if (!(inventory instanceof DoubleChestInventory)) {
+			for (Block b : MultiBlockStructure.searchForBlockOnSides(getChest(), Material.CHEST)) {
+				if (b.getType() == Material.CHEST) {
+					Inventory secondChestInventory = ((Chest) (getChest().getState())).getInventory();
+					if (secondChestInventory instanceof DoubleChestInventory) {
+						if (((DoubleChestInventory) secondChestInventory).getLeftSide().equals(inventory)
+								|| ((DoubleChestInventory) secondChestInventory).getRightSide().equals(inventory)) {
+							return secondChestInventory;
+						}
+					}
+				}
+			}
+		}
+
+		return inventory;
 	}
 
 	/**
