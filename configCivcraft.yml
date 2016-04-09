@@ -1022,7 +1022,7 @@ factories:
     sort_amount: 64
     maximum_materials_per_side: 10
     
-# Recipes:
+Recipes:
   Repair_Rudimentary_Factory:
     type: REPAIR
     name: Repair Factory
