@@ -773,6 +773,7 @@ factories:
      - Enchant_Pickaxe_SilkTouch_I
      - Enchant_Axe_SilkTouch_I
      - Enchant_Shovel_SilkTouch_I
+     - Enchant_Shears_SilkTouch_I
      - Enchant_FeatherFalling_I
      - Enchant_FeatherFalling_II
      - Enchant_FeatherFalling_III
@@ -7592,6 +7593,19 @@ recipes:
     enchant_item:
       pickaxe:
         material: DIAMOND_SPADE
+  Enchant_Shears_SilkTouch_I
+    name: Enchant Shears with Silk Touch
+    type: ENCHANT
+    production_time: 1m
+    input:
+      emeralds:
+        material: EMERALD
+        amount: 1000
+    enchant: SILK_TOUCH
+    level: 1
+    enchant_item:
+      shears:
+        material: SHEARS
 #Protection
 
   Enchant_Helmet_Protection_I:
