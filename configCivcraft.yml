@@ -682,6 +682,7 @@ factories:
      - Upgrade_to_Dagger_Forge
      - Upgrade_to_Quick_Forge
      - Upgrade_to_Rock_Forge
+     - Repair_Factory
 #Fire
   emberforge:
     type: FCCUPGRADE
@@ -701,6 +702,7 @@ factories:
      - Enchant_Boots_FireP_III
      - Enchant_FireAspect_I
      - Upgrade_to_Magma_Forge
+     - Repair_Factory
   magmaforge:
     type: FCCUPGRADE
     name: Magma Forge
@@ -732,6 +734,7 @@ factories:
      - Enchant_Flame_I
      - Enchant_FireAspect_I
      - Enchant_FireAspect_II
+     - Repair_Factory
 #Water
   riverforge:
     type: FCCUPGRADE
@@ -741,6 +744,7 @@ factories:
      - Enchant_Respiration_I
      - Enchant_Respiration_II
      - Upgrade_to_Ocean_Forge
+     - Repair_Factory
 #    - Enchant_FrostWalker_I
   oceanforge:
     type: FCCUPGRADE
@@ -753,6 +757,7 @@ factories:
      - Enchant_Respiration_I
      - Enchant_Respiration_II
      - Enchant_Respiration_III
+     - Repair_Factory
 #    - Enchant_FrostWalker_II
 #Magic
   magicforge:
@@ -765,6 +770,7 @@ factories:
      - Enchant_BOA_II
      - Enchant_BOA_III
      - Upgrade_to_Arcane_Forge
+     - Repair_Factory
   arcaneforge:
     type: FCCUPGRADE
     name: Arcane Forge
@@ -782,6 +788,7 @@ factories:
      - Enchant_BOA_III
      - Enchant_BOA_IV
      - Enchant_BOA_V
+     - Repair_Factory
 #Armor
   mithrilforge:
     type: FCCUPGRADE
@@ -797,6 +804,7 @@ factories:
      - Enchant_Boots_BlastProtection_I
      - Enchant_Thorns_I
      - Upgrade_to_Titanium_Forge
+     - Repair_Factory
   titaniumforge:
     type: FCCUPGRADE
     name: Titanium Forge
@@ -829,6 +837,7 @@ factories:
      - Enchant_Thorns_I
      - Enchant_Thorns_II
      - Upgrade_to_Meteor_Forge
+     - Repair_Factory
   Meteorforge:
     type: FCCUPGRADE
     name: Meteor Forge
@@ -868,6 +877,7 @@ factories:
      - Enchant_Thorns_I
      - Enchant_Thorns_II
      - Enchant_Thorns_III
+     - Repair_Factory
 #Archery
   archerforge:
     type: FCCUPGRADE
@@ -880,6 +890,7 @@ factories:
      - Enchant_Leggings_ProjectileProtection_I
      - Enchant_Boots_ProjectileProtection_I
      - Upgrade_to_Marksman_Forge
+     - Repair_Factory
   marksmanforge:
     type: FCCUPGRADE
     name: Marksman Forge
@@ -903,6 +914,7 @@ factories:
      - Enchant_Helmet_ProjectileProtection_III
      - Enchant_Punch_I
      - Upgrade_to_Sniper_Forge
+     - Repair_Factory
   sniperforge:
     type: FCCUPGRADE
     name: Sniper Forge
@@ -930,6 +942,7 @@ factories:
      - Enchant_Boots_ProjectileProtection_IV
      - Enchant_Punch_I
      - Enchant_Punch_II
+     - Repair_Factory
 #Swords
   daggerforge:
     type: FCCUPGRADE
@@ -940,6 +953,7 @@ factories:
      - Enchant_Smite_I
      - Enchant_Smite_II
      - Upgrade_to_Sword_Forge
+     - Repair_Factory
   swordforge:
     type: FCCUPGRADE
     name: Sword Forge
@@ -954,6 +968,7 @@ factories:
      - Enchant_Smite_IV
      - Enchant_Knockback_I
      - Upgrade_to_Blade_Forge
+     - Repair_Factory
   bladeforge:
     type: FCCUPGRADE
     name: Blade Forge
@@ -970,6 +985,7 @@ factories:
      - Enchant_Smite_V
      - Enchant_Knockback_I
      - Enchant_Knockback_II
+     - Repair_Factory
 #Efficiency
   quickforge:
     type: FCCUPGRADE
@@ -982,6 +998,7 @@ factories:
      - Enchant_Shovel_Efficiency_I
      - Enchant_Shovel_Efficiency_II
      - Upgrade_to_Rapid_Forge
+     - Repair_Factory
   rapidforge:
     type: FCCUPGRADE
     name: Rapid Forge
@@ -999,6 +1016,7 @@ factories:
      - Enchant_Shovel_Efficiency_III
      - Enchant_Shovel_Efficiency_IV
      - Upgrade_to_Sonic_Forge
+     - Repair_Factory
   sonicforge:
     type: FCCUPGRADE
     name: Sonic Forge
@@ -1018,6 +1036,7 @@ factories:
      - Enchant_Shovel_Efficiency_III
      - Enchant_Shovel_Efficiency_IV
      - Enchant_Shovel_Efficiency_V
+     - Repair_Factory
 #Unbreaking
   rockforge:
     type: FCCUPGRADE
@@ -1033,6 +1052,7 @@ factories:
      - Enchant_Sword_Unbreaking_I
      - Enchant_Bow_Unbreaking_I
      - Upgrade_to_Metal_Forge
+     - Repair_Factory
   metalforge:
     type: FCCUPGRADE
     name: Metal Forge
@@ -1056,6 +1076,7 @@ factories:
      - Enchant_Bow_Unbreaking_I
      - Enchant_Bow_Unbreaking_II
      - Upgrade_to_Carbon_Forge
+     - Repair_Factory
   carbonforge:
     type: FCCUPGRADE
     name: Carbon Forge
@@ -1087,6 +1108,7 @@ factories:
      - Enchant_Bow_Unbreaking_I
      - Enchant_Bow_Unbreaking_II
      - Enchant_Bow_Unbreaking_III
+     - Repair_Factory
      
 ## XP Production
   apprenticetransmuter:
@@ -1097,6 +1119,7 @@ factories:
      - Cypress_Enrichment
      - Pine_Enrichment
      - Upgrade_to_Adept_Transmuter
+     - Repair_Factory
   adepttransmuter:
     type: FCCUPGRADE
     name: Adept Transmuter
@@ -1105,6 +1128,7 @@ factories:
      - Copper_Enrichment
      - Tin_Enrichment
      - Upgrade_to_Grandmaster_Transmuter
+     - Repair_Factory
   grandmastertransmuter:
     type: FCCUPGRADE
     name: Grandmaster Transmuter
@@ -1112,6 +1136,7 @@ factories:
      - Amethyst_Enrichment
      - Topaz_Enrichment
      - Ruby_Enrichment
+     - Repair_Factory
      
 
 #Pipes     
