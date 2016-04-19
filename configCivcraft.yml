@@ -5353,7 +5353,7 @@ recipes:
         material: COMPASS
         amount: 1
       map:
-        material: MAP
+        material: EMPTY_MAP
         amount: 1
       xp:
         material: EMERALD_BLOCK
