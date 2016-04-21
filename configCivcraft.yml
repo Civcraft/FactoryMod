@@ -5416,7 +5416,7 @@ recipes:
       xp:
         material: EMERALD
         amount: 28
-    health_gained: 1250
+    health_gained: 5000
   Repair_Advanced_Pylon:
     type: REPAIR
     name: Repair Advanced Pylon
@@ -5425,7 +5425,7 @@ recipes:
       xp:
         material: EMERALD_BLOCK
         amount: 17
-    health_gained: 1250
+    health_gained: 5000
   Repair_Expert_Pylon:
     type: REPAIR
     name: Repair Expert Pylon
@@ -5434,7 +5434,7 @@ recipes:
       xp:
         material: EMERALD_BLOCK
         amount: 38
-    health_gained: 1250
+    health_gained: 5000
 #Bastion recipes
   Brew_Soup_Concentrate:
     name: Brew Soup Concentrate
