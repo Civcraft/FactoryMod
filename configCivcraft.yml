@@ -5372,7 +5372,7 @@ recipes:
         enchants:
           dura:
             enchant: DURABILITY
-    weight: 40
+    weight: 10
   Pylon_Advanced:
     name: Extract Aether
     type: PYLON
@@ -5382,13 +5382,13 @@ recipes:
     output:
       aether:
         material: GOLD_NUGGET
-        amount: 14
+        amount: 20
         lore:
          - Aether
         enchants:
           dura:
             enchant: DURABILITY
-    weight: 26
+    weight: 17
   Pylon_Expert:
     name: Extract Aether
     type: PYLON
@@ -5398,7 +5398,7 @@ recipes:
     output:
       aether:
         material: GOLD_NUGGET
-        amount: 20
+        amount: 30
         lore:
          - Aether
         enchants:
