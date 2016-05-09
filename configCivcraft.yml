@@ -553,6 +553,8 @@ factories:
     - Upgrade_to_Printing_Press
     - Upgrade_to_Basic_Pylon
     - Upgrade_to_Redstone_Factory_Basic
+    - Upgrade_to_Fletching_Factory
+    
   bastionfactory:
     type: FCCUPGRADE
     name: Bastion Factory
@@ -941,6 +943,12 @@ factories:
      - Enchant_Punch_I
      - Enchant_Punch_II
      - Repair_Factory
+  fletchingfactory:
+    type: FCCUPGRADE
+    name: Fletching Factory
+    recipes:
+     - Fletch_Spectral_Arrows
+     
 #Swords
   daggerforge:
     type: FCCUPGRADE
@@ -5388,7 +5396,43 @@ recipes:
       xp:
         material: EMERALD_BLOCK
         amount: 128
-        
+  Upgrade_to_Fletching_Factory:
+    production_time: 60m
+    type: UPGRADE
+    name: Upgrade to Fletching Factory
+    fuel_consumption_intervall: 50s
+    input:
+      arrowsfordays:
+        material: ARROW
+        amount: 512
+      eggsaresticky:
+        material: EGG
+        amount: 256
+      gluten:
+        material: HAY_BLOCK
+        amount: 128
+      netherwart:
+        material: NETHER_WARTS 
+        amount: 64
+      oaktreesapglue:
+         material: SAPLING
+         amount: 32
+         durability: 0
+      sprucesapglue:
+         material: SAPLING
+         amount: 32
+         durability: 1
+      water:
+        material: WATER_BUCKET 
+        amount: 4
+#May cause issues. Have we tried outputs with an upgrade recipe before?
+    output:
+      drybuckets:
+        material: BUCKET
+        amount: 4
+    factory: Fletching Factory
+
+
 #Pylon recipes
   Pylon_Basic:
     name: Extract Aether
@@ -10020,6 +10064,24 @@ recipes:
     enchant_item:
       armor:
         material: DIAMOND_SWORD
+        
+#Fletch Arrow recipes
+  Fletch_Spectral_Arrows:
+    name: Fletch Spectral Arrows
+    type: PRODUCTION
+    production_time: 30s
+    fuel_consumption_intervall: 5s
+    input:
+      arrows:
+        material: ARROW
+        amount: 16
+      glowdust:
+        material: GLOWSTONE_DUST
+        amount: 16
+    output:
+      arrowsS:
+        material: SPECTRAL_ARROW
+        amount: 64
         
 #Destroy factory and returns the setup cost multiplied by a given factor
   Return_Materials:
