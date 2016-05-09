@@ -5410,25 +5410,36 @@ recipes:
         amount: 256
       gluten:
         material: HAY_BLOCK
-        amount: 128
+        amount: 256
       netherwart:
         material: NETHER_WARTS 
-        amount: 64
+        amount: 256
       oaktreesapglue:
          material: SAPLING
-         amount: 32
+         amount: 64
          durability: 0
       sprucesapglue:
          material: SAPLING
-         amount: 32
+         amount: 64
          durability: 1
-      water:
+      birchsapglue:
+         material: SAPLING
+         amount: 64
+         durability: 2
+      acaciasapglue:
+         material: SAPLING
+         amount: 64
+         durability: 3
+      junglesapglue:
+         material: SAPLING
+         amount: 64
+         durability: 4
+      darkoaksapglue:
+         material: SAPLING
+         amount: 64
+         durability: 5
+      ripurwater:
         material: WATER_BUCKET 
-        amount: 4
-#May cause issues. Have we tried outputs with an upgrade recipe before?
-    output:
-      drybuckets:
-        material: BUCKET
         amount: 4
     factory: Fletching Factory
 
