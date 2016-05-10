@@ -948,6 +948,7 @@ factories:
     name: Fletching Factory
     recipes:
      - Fletch_Spectral_Arrows
+     - Fletch_Jump1_Arrows
      
 #Swords
   daggerforge:
@@ -5402,45 +5403,43 @@ recipes:
     name: Upgrade to Fletching Factory
     fuel_consumption_intervall: 50s
     input:
-      arrowsfordays:
-        material: ARROW
+      featherssfordays:
+        material: FEATHER 
+        amount: 256
+      flintpower:
+        material: FLINT
+        amount: 256
+      sap:
+        material: LOG
+        amount: 256
+        durability: -1
+      bows:
+        material: BOW
+        amount: 8
+      glowstone:
+        material: GLOWSTONE
         amount: 512
-      eggsaresticky:
-        material: EGG
+      redblock:
+        material: REDSTONE_BLOCK
+        amount: 64
+      blazerods:
+        material: BLAZE_ROD
         amount: 256
-      gluten:
-        material: HAY_BLOCK
+      magmacream:
+        material: MAGMA_CREAM
         amount: 256
-      netherwart:
-        material: NETHER_WARTS 
+      ghasttears:
+        material: GHAST_TEAR
+        amount: 64
+      sugar:
+        material: SUGAR
         amount: 256
-      oaktreesapglue:
-         material: SAPLING
-         amount: 64
-         durability: 0
-      sprucesapglue:
-         material: SAPLING
-         amount: 64
-         durability: 1
-      birchsapglue:
-         material: SAPLING
-         amount: 64
-         durability: 2
-      acaciasapglue:
-         material: SAPLING
-         amount: 64
-         durability: 3
-      junglesapglue:
-         material: SAPLING
-         amount: 64
-         durability: 4
-      darkoaksapglue:
-         material: SAPLING
-         amount: 64
-         durability: 5
+      sugareye:
+        material: FERMENTED_SPIDER_EYE
+        amount: 256
       ripurwater:
         material: WATER_BUCKET 
-        amount: 4
+        amount: 8
     factory: Fletching Factory
 
 
@@ -10093,7 +10092,31 @@ recipes:
       arrowsS:
         material: SPECTRAL_ARROW
         amount: 64
-        
+  Fletch_Jump1_Arrows:
+    name: Fletch Jump I Arrows
+    type: PRODUCTION
+    production_time: 30s
+    fuel_consumption_interval: 5s
+    input:
+      arrows:
+        material: ARROW
+        amount: 64
+      jumppot1:
+        material: POTION
+        amount: 8
+        potion_effects:
+          type: JUMP
+          upgrade: false
+          extended: false
+    output:
+      jumparrows1:
+        material: TIPPED_ARROW
+        amount: 64
+        potion_effects:
+          type: JUMP
+          upgrade: false
+          extended: false
+
 #Destroy factory and returns the setup cost multiplied by a given factor
   Return_Materials:
     type: COSTRETURN
