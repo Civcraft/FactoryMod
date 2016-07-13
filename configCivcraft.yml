@@ -629,6 +629,8 @@ factories:
     - Upgrade_to_Printing_Press
     - Upgrade_to_Basic_Pylon
     - Upgrade_to_Redstone_Factory_Basic
+    - Upgrade_to_Fletching_Factory
+    
   bastionfactory:
     type: FCCUPGRADE
     name: Bastion Factory
@@ -1005,6 +1007,13 @@ factories:
      - Enchant_Punch_I
      - Enchant_Punch_II
      - Repair_Factory
+  fletchingfactory:
+    type: FCCUPGRADE
+    name: Fletching Factory
+    recipes:
+     - Fletch_Spectral_Arrows
+     - Fletch_Jump1_Arrows
+     
 #Swords
   daggerforge:
     type: FCCUPGRADE
@@ -5444,7 +5453,52 @@ recipes:
       xp:
         material: EMERALD_BLOCK
         amount: 128
-        
+  Upgrade_to_Fletching_Factory:
+    production_time: 60m
+    type: UPGRADE
+    name: Upgrade to Fletching Factory
+    fuel_consumption_intervall: 50s
+    input:
+      featherssfordays:
+        material: FEATHER 
+        amount: 256
+      flintpower:
+        material: FLINT
+        amount: 256
+      sap:
+        material: LOG
+        amount: 256
+        durability: -1
+      bows:
+        material: BOW
+        amount: 8
+      glowstone:
+        material: GLOWSTONE
+        amount: 512
+      redblock:
+        material: REDSTONE_BLOCK
+        amount: 64
+      blazerods:
+        material: BLAZE_ROD
+        amount: 256
+      magmacream:
+        material: MAGMA_CREAM
+        amount: 256
+      ghasttears:
+        material: GHAST_TEAR
+        amount: 64
+      sugar:
+        material: SUGAR
+        amount: 256
+      sugareye:
+        material: FERMENTED_SPIDER_EYE
+        amount: 256
+      ripurwater:
+        material: WATER_BUCKET 
+        amount: 8
+    factory: Fletching Factory
+
+
 #Pylon recipes
   Pylon_Basic:
     name: Extract Aether
@@ -11505,6 +11559,48 @@ recipes:
         amount: 8
         
         
+#Fletch Arrow recipes
+  Fletch_Spectral_Arrows:
+    name: Fletch Spectral Arrows
+    type: PRODUCTION
+    production_time: 30s
+    fuel_consumption_intervall: 5s
+    input:
+      arrows:
+        material: ARROW
+        amount: 16
+      glowdust:
+        material: GLOWSTONE_DUST
+        amount: 16
+    output:
+      arrowsS:
+        material: SPECTRAL_ARROW
+        amount: 64
+  Fletch_Jump1_Arrows:
+    name: Fletch Jump I Arrows
+    type: PRODUCTION
+    production_time: 30s
+    fuel_consumption_interval: 5s
+    input:
+      arrows:
+        material: ARROW
+        amount: 64
+      jumppot1:
+        material: POTION
+        amount: 8
+        potion_effects:
+          type: JUMP
+          upgrade: false
+          extended: false
+    output:
+      jumparrows1:
+        material: TIPPED_ARROW
+        amount: 64
+        potion_effects:
+          type: JUMP
+          upgrade: false
+          extended: false
+
 #Destroy factory and returns the setup cost multiplied by a given factor
   Return_Materials:
     type: COSTRETURN
