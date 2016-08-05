@@ -1644,7 +1644,7 @@ recipes:
     input:
       iron block:
         material: IRON_BLOCK
-        amount: 32
+        amount: 24
     output:
       anvil:
         material: ANVIL
@@ -1656,7 +1656,7 @@ recipes:
     input:
       iron block:
         material: IRON_BLOCK
-        amount: 32
+        amount: 24
     output:
       anvil:
         material: ANVIL
@@ -1739,13 +1739,13 @@ recipes:
     name: Craft Buckets
     production_time: 5s
     input:
-      iron block:
-        material: IRON_BLOCK
-        amount: 4
+      iron ingot:
+        material: IRON_INGOT
+        amount: 9
     output:
       bucket:
         material: BUCKET
-        amount: 16
+        amount: 9
   Craft_Buckets_Basic:
     type: PRODUCTION
     name: Craft Buckets
@@ -1753,11 +1753,11 @@ recipes:
     input:
       iron block:
         material: IRON_BLOCK
-        amount: 5
+        amount: 12
     output:
       bucket:
         material: BUCKET
-        amount: 16
+        amount: 6
   Craft_Chiselled_Quartz_Blocks:
     type: PRODUCTION
     name: Craft Chiselled Quartz Blocks
@@ -2201,13 +2201,10 @@ recipes:
       iron ingot:
         material: IRON_INGOT
         amount: 32
-      stick:
-        material: STICK
-        amount: 4
     output:
       rail:
         material: RAILS
-        amount: 96
+        amount: 128
   Craft_Redstone_Comparator:
     type: PRODUCTION
     name: Craft Redstone Comparator
@@ -2808,7 +2805,7 @@ recipes:
     output:
       rail:
         material: RAILS
-        amount: 128
+        amount: 192
   Cut_any_type_of_Plank_Advanced:
     type: WOODMAPPING
     name: Cut Planks
@@ -2869,11 +2866,11 @@ recipes:
     input:
       diamond ore:
         material: DIAMOND_ORE
-        amount: 20
+        amount: 32
     output:
       diamond:
         material: DIAMOND
-        amount: 24
+        amount: 64
   Extract_Emeralds:
     type: PRODUCTION
     name: Extract Emeralds
@@ -3062,11 +3059,11 @@ recipes:
     input:
       diamond:
         material: DIAMOND
-        amount: 6
+        amount: 12
     output:
       diamond pickaxe:
         material: DIAMOND_PICKAXE
-        amount: 4
+        amount: 8
   Forge_Diamond_Shovel:
     type: PRODUCTION
     name: Forge Diamond Shovel
@@ -3074,11 +3071,11 @@ recipes:
     input:
       diamond:
         material: DIAMOND
-        amount: 2
+        amount: 4
     output:
       diamond shovel:
         material: DIAMOND_SPADE
-        amount: 4
+        amount: 10
   Forge_Diamond_Pickaxe_Basic:
     type: PRODUCTION
     name: Forge Diamond Pickaxe
@@ -3086,11 +3083,11 @@ recipes:
     input:
       diamond:
         material: DIAMOND
-        amount: 9
+        amount: 12
     output:
       diamond pickaxe:
         material: DIAMOND_PICKAXE
-        amount: 4
+        amount: 6
   Forge_Diamond_Shovel_Basic:
     type: PRODUCTION
     name: Forge Diamond Shovel
@@ -3098,11 +3095,11 @@ recipes:
     input:
       diamond:
         material: DIAMOND
-        amount: 3
+        amount: 4
     output:
       diamond shovel:
         material: DIAMOND_SPADE
-        amount: 4
+        amount: 8
   Forge_Diamond_Sword:
     type: PRODUCTION
     name: Forge Diamond Sword
@@ -3110,11 +3107,11 @@ recipes:
     input:
       diamond:
         material: DIAMOND
-        amount: 4
+        amount: 10
     output:
       diamond sword:
         material: DIAMOND_SWORD
-        amount: 4
+        amount: 7
   Forge_Gold_Axe:
     type: PRODUCTION
     name: Forge Gold Axe
@@ -3290,11 +3287,11 @@ recipes:
     input:
       iron:
         material: IRON_INGOT
-        amount: 8
+        amount: 12
     output:
       iron axe:
         material: IRON_AXE
-        amount: 4
+        amount: 6
   Forge_Iron_Boots:
     type: PRODUCTION
     name: Forge Iron Boots
@@ -3342,7 +3339,7 @@ recipes:
     output:
       iron hoe:
         material: IRON_HOE
-        amount: 4
+        amount: 6
   Forge_Iron_Horse_Armour:
     type: PRODUCTION
     name: Forge Iron Horse Armour
@@ -3374,11 +3371,11 @@ recipes:
     input:
       iron:
         material: IRON_INGOT
-        amount: 9
+        amount: 12
     output:
       iron pickaxe:
         material: IRON_PICKAXE
-        amount: 4
+        amount: 6
   Forge_Iron_Shovel:
     type: PRODUCTION
     name: Forge Iron Shovel
@@ -3386,11 +3383,11 @@ recipes:
     input:
       iron:
         material: IRON_INGOT
-        amount: 3
+        amount: 4
     output:
       iron shovel:
         material: IRON_SPADE
-        amount: 4
+        amount: 8
   Forge_Iron_Sword:
     type: PRODUCTION
     name: Forge Iron Sword
@@ -3402,7 +3399,7 @@ recipes:
     output:
       iron sword:
         material: IRON_SWORD
-        amount: 8
+        amount: 10
   Forge_Stone_Axe:
     type: PRODUCTION
     name: Forge Stone Axe
@@ -3502,7 +3499,7 @@ recipes:
   Grill_Steak_Basic:
     type: PRODUCTION
     name: Grill Steak
-    production_time: 20s
+    production_time: 16s
     input:
       beef:
         material: RAW_BEEF
@@ -3934,7 +3931,7 @@ recipes:
   Smelt_Glass_Basic:
     type: PRODUCTION
     name: Smelt Glass
-    production_time: 32s
+    production_time: 8s
     input:
       sand:
         material: SAND
@@ -4014,7 +4011,7 @@ recipes:
     output:
       iron ingot:
         material: IRON_INGOT
-        amount: 110
+        amount: 128
   Smelt_Iron_Ore_Basic:
     type: PRODUCTION
     name: Smelt Iron Ore
@@ -4220,7 +4217,7 @@ recipes:
     name: Smelt Stone
     production_time: 35s
     input:
-      sobblestone:
+      cobblestone:
         material: COBBLESTONE
         amount: 256
     output:
@@ -4572,16 +4569,10 @@ recipes:
       diamond block:
         material: DIAMOND_BLOCK
         amount: 64
-      char:
+      charcoal:
         material: COAL
         durability: 1
         amount: 1024
-      lava:
-        material: LAVA_BUCKET
-        amount: 16
-      anvil:
-        material: ANVIL
-        amount: 128
     factory: Diamond Armour Forge
   Upgrade_to_Diamond_Equipment_Forge:
     production_time: 1h
@@ -4596,12 +4587,9 @@ recipes:
         material: COAL
         durability: 1
         amount: 512
-      lava:
-        material: LAVA_BUCKET
-        amount: 8
       anvil:
         material: ANVIL
-        amount: 64
+        amount: 32
     factory: Diamond Equipment Forge
   Upgrade_to_Diamond_Tools_Forge:
     production_time: 1h
@@ -4616,12 +4604,6 @@ recipes:
         material: COAL
         durability: 1
         amount: 1024
-      lava:
-        material: LAVA_BUCKET
-        amount: 16
-      anvil:
-        material: ANVIL
-        amount: 128
     factory: Diamond Tools Forge
   Upgrade_to_Farmstead_Factory:
     production_time: 10m
@@ -4677,16 +4659,16 @@ recipes:
     input:
       diamond:
         material: DIAMOND_BLOCK
-        amount: 64
+        amount: 48
       quartz:
         material: QUARTZ
-        amount: 2048
+        amount: 1024
       lapis:
         material: LAPIS_BLOCK
-        amount: 256
+        amount: 64
       redstone:
         material: REDSTONE_BLOCK
-        amount: 256
+        amount: 64
     factory: Gem Extractor
   Upgrade_to_Glass_Dying_Factory:
     production_time: 1h
@@ -4894,7 +4876,7 @@ recipes:
     input:
       iron block:
         material: IRON_BLOCK
-        amount: 128
+        amount: 32
       wood:
         material: WOOD
         durability: -1
@@ -4903,12 +4885,6 @@ recipes:
         material: COAL
         durability: 1
         amount: 512
-      lava:
-        material: LAVA_BUCKET
-        amount: 12
-      anvil:
-        material: ANVIL
-        amount: 64
     factory: Iron Equipment Forge
   Upgrade_to_Iron_Forge_Advanced:
     production_time: 3600s
@@ -4923,9 +4899,6 @@ recipes:
         material: COAL
         durability: 1
         amount: 1024
-      anvil:
-        material: ANVIL
-        amount: 384
       lava:
         material: LAVA_BUCKET
         amount: 24  
@@ -4938,14 +4911,11 @@ recipes:
     input:
       iron block:
         material: IRON_BLOCK
-        amount: 192
-      char:
+        amount: 32
+      charcoal:
         material: COAL
         durability: 1
         amount: 512
-      lava:
-        material: LAVA_BUCKET
-        amount: 8
     factory: Iron Forge
   Upgrade_to_Kiln:
     production_time: 1800s
@@ -4970,12 +4940,12 @@ recipes:
     name: Upgrade to Laboratory
     fuel_consumption_intervall: 20s
     input:
-      cauldron:
+      redstone:
         material: REDSTONE
         amount: 256
-      glass bottle:
+      cauldron:
         material: CAULDRON_ITEM
-        amount: 32
+        amount: 16
     factory: Laboratory
   Upgrade_to_Netherbrick_Smelter:
     production_time: 1h
@@ -4992,23 +4962,22 @@ recipes:
       lavabucket:
         material: LAVA_BUCKET
         amount: 16
-      
     factory: Netherbrick Smelter
   Upgrade_to_Ore_Smelter:
-    production_time: 900s
+    production_time: 1800s
     type: UPGRADE
     name: Upgrade to Ore Smelter
-    fuel_consumption_intervall: 8s
+    fuel_consumption_intervall: 15s
     input:
       iron ingot:
         material: IRON_BLOCK
-        amount: 96
+        amount: 32
       coal:
         material: COAL_BLOCK
-        amount: 192
+        amount: 96
       redstone:
         material: REDSTONE_BLOCK
-        amount: 48
+        amount: 16
     factory: Ore Smelter
   Upgrade_to_Ore_Forge:
     production_time: 4h
@@ -5018,13 +4987,13 @@ recipes:
     input:
       iron ingot:
         material: IRON_BLOCK
-        amount: 384
+        amount: 128
       gold ingot:
         material: GOLD_BLOCK
-        amount: 192
+        amount: 48
       coal:
         material: COAL_BLOCK
-        amount: 512
+        amount: 192
     factory: Ore Forge
   Upgrade_to_Organic_Block_Factory:
     production_time: 1800s
@@ -5074,12 +5043,6 @@ recipes:
         material: COAL
         durability: 1
         amount: 512
-      anvil:
-        material: ANVIL
-        amount: 128
-      lava:
-        material: LAVA_BUCKET
-        amount: 16
       wood:
         material: WOOD
         durability: -1
