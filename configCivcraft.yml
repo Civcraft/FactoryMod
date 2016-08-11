@@ -3657,7 +3657,7 @@ recipes:
     output:
       beetroot soup:
         material: BEETROOT_SOUP
-        amount:18
+        amount: 18
   Mutate_random_sapling:
     type: RANDOM
     name: Mutate Random Sapling
