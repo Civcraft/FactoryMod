@@ -4723,67 +4723,67 @@ recipes:
         amount: 576
       dye0:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 0
       dye1:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 1
       dye2:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 2
       dye3:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 3
       dye4:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 4
       dye5:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 5
       dye6:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 6
       dye7:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 7
       dye8:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 8
       dye9:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 9
       dye10:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 10
       dye11:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 11
       dye12:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 12
       dye13:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 13
       dye14:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 14
       dye15:
         material: INK_SACK
-        amount: 128
+        amount: 32
         durability: 15        
     factory: Glass Dying Factory
   Upgrade_to_Gold_Equipment_Forge:
@@ -5297,67 +5297,67 @@ recipes:
         amount: 256
       dye0:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 0
       dye1:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 1
       dye2:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 2
       dye3:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 3
       dye4:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 4
       dye5:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 5
       dye6:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 6
       dye7:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 7
       dye8:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 8
       dye9:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 9
       dye10:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 10
       dye11:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 11
       dye12:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 12
       dye13:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 13
       dye14:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 14
       dye15:
         material: INK_SACK
-        amount: 64
+        amount: 32
         durability: 15
     factory: Wool Processing
   Upgrade_to_Fancy_Stone_Smelter:
@@ -10253,7 +10253,8 @@ recipes:
               level: 5
             ub:
               enchant: DURABILITY
-              level: 5
+              level: 4
+          durability: 1500
       godbook1:
         chance: 0.00120909
         power5book:
@@ -10460,7 +10461,7 @@ recipes:
         chance: 0.0037038
         item:
           material: COAL
-          amount: 32
+          amount: 16
           durability: 1
           lore:
            - Compacted Item
@@ -10468,7 +10469,7 @@ recipes:
         chance: 0.0037012
         item:
           material: COAL_ORE
-          amount: 5
+          amount: 2
           lore:
            - Cave Concentrate
       mid1:
@@ -10721,7 +10722,8 @@ recipes:
               level: 5
             ub:
               enchant: DURABILITY
-              level: 5
+              level: 4
+          durability: 1500
       godbook1:
         chance: 0.00120909
         power5book:
@@ -10928,7 +10930,7 @@ recipes:
         chance: 0.0037038
         item:
           material: COAL
-          amount: 32
+          amount: 16
           durability: 1
           lore:
            - Compacted Item
@@ -10936,7 +10938,7 @@ recipes:
         chance: 0.0037012
         item:
           material: COAL_ORE
-          amount: 5
+          amount: 2
           lore:
            - Cave Concentrate
       mid1:
