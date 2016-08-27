@@ -5294,7 +5294,7 @@ recipes:
     fuel_consumption_interval: 20s
     input:
       planks:
-        material: LOG2
+        material: LOG_2
         durability: -1
         amount: 512
   Upgrade_to_Wool_Processing:
