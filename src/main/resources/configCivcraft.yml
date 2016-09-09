@@ -7035,7 +7035,7 @@ recipes:
         amount: 160
       melons:
         material: MELON_BLOCK
-        amount: 128
+        amount: 48
 #      chicken:
 #        material: RAW_CHICKEN
 #        amount: 32
@@ -7151,7 +7151,7 @@ recipes:
          - Compacted Item
       melons:
         material: MELON_BLOCK
-        amount: 10
+        amount: 4
         lore:
          - Compacted Item
 #      chicken:
