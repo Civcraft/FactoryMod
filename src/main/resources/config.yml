@@ -78,8 +78,8 @@
 #like this:
 
 #examplePot:
-# material: POTION
 # potion_effects:
+#   material: POTION
 #   type: LUCK
 #   upgraded: true
 #   extended: true
