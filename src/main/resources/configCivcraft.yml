@@ -7250,7 +7250,7 @@ recipes:
          - Compacted Item
       oaksaplings:
         material: SAPLING
-        amount: 2
+        amount: 1
         durability: 0
         lore:
          - Compacted Item
@@ -7269,7 +7269,7 @@ recipes:
 #        amount: 160
       salmon:
         material: RAW_FISH
-        amount: 19
+        amount: 5
         durability: 1
       vines:
         material: VINE
