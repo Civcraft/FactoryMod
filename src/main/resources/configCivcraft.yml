@@ -7194,7 +7194,7 @@ recipes:
          - Compacted Item
       darkoaksaplings:
         material: SAPLING
-        amount: 32
+        amount: 16
         durability: 5
       cactus:
         material: CACTUS
@@ -7216,7 +7216,7 @@ recipes:
         durability: 3
       eggs:
         material: EGG
-        amount: 8
+        amount: 4
         lore:
          - Compacted Item
       aether:
