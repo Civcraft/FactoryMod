@@ -5652,7 +5652,7 @@ recipes:
     name: Extract Aether
     type: PYLON
     production_time: 4h
-    fuel_consumption_intervall: 80m
+    fuel_consumption_intervall: 24m
     input:
     output:
       aether:
@@ -5667,7 +5667,7 @@ recipes:
   Pylon_Advanced:
     name: Extract Aether
     type: PYLON
-    fuel_consumption_intervall: 80m
+    fuel_consumption_intervall: 24m
     production_time: 2h
     input:
     output:
@@ -5683,7 +5683,7 @@ recipes:
   Pylon_Expert:
     name: Extract Aether
     type: PYLON
-    fuel_consumption_intervall: 80m
+    fuel_consumption_intervall: 24m
     production_time: 2h
     input:
     output:
