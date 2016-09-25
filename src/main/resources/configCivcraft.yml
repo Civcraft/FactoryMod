@@ -7157,12 +7157,15 @@ recipes:
 #      chicken:
 #        material: RAW_CHICKEN
 #        amount: 160
-      inksacs:
-        material: INK_SACK
-        amount: 32
-      apples:
-        material: APPLE
-        amount: 16
+      vines:
+        material: VINE
+        amount: 6
+        lore:
+         - Compacted Item
+      fish:
+        material: RAW_FISH
+        amount: 15
+        durability: 1
       aether:
         material: GOLD_NUGGET
         amount: 120
@@ -7214,9 +7217,9 @@ recipes:
         material: RAW_FISH
         amount: 3
         durability: 3
-      eggs:
-        material: EGG
-        amount: 4
+      vines:
+        material: VINE
+        amount: 6
         lore:
          - Compacted Item
       aether:
