@@ -7213,7 +7213,7 @@ recipes:
 #      beef:
 #        material: RAW_BEEF
 #        amount: 160
-      clownfish:
+      pufferfish:
         material: RAW_FISH
         amount: 3
         durability: 3
