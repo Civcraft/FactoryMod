@@ -50,6 +50,7 @@ factories:
     - Upgrade_to_Basic_Forge
     - Upgrade_to_Basic_Fortification
     - Upgrade_to_Printing_Press
+    - Upgrade_to_Slow_Stone_Smelter
     
   #Reinforcement factories
   #Basic Contraption --> Basic Fortification
@@ -1316,6 +1317,15 @@ factories:
      - Ruby_Enrichment
      - Repair_Expert_Factory
      
+#Slow
+  slowstonesmelter:
+    #Basic Contraption --> Slow Stone Smelter
+    type: FCCUPGRADE
+    name: Slow Stone Smelter
+    citadelBreakReduction: 0.4
+    recipes:
+    - Smelt_Stone_Slow
+    - Repair_Slow_Factory
 
 #Pipes     
   normalpipe:
@@ -1442,6 +1452,21 @@ recipes:
           dura:
             enchant: DURABILITY
         amount: 105
+    health_gained: 3334
+# slow
+  Repair_Slow_Factory:
+    type: REPAIR
+    name: Repair Slow Factory
+    production_time: 20s
+    input:
+      eye of ender:
+        material: EYE_OF_ENDER
+        lore:
+         - Essence
+        enchants:
+          dura:
+            enchant: DURABILITY
+        amount: 2
     health_gained: 3334
   Bake_Bread_Advanced:
     type: PRODUCTION
@@ -4388,6 +4413,19 @@ recipes:
       stone:
         material: STONE
         amount: 720
+  Smelt_Stone_Slow:
+    type: PRODUCTION
+    name: Smelt Stone
+    production_time: 3600s
+    fuel_consumption_intervall: 22.5m
+    input:
+      sobblestone:
+        material: COBBLESTONE
+        amount: 108
+    output:
+      stone:
+        material: STONE
+        amount: 144
   Take_any_mob_egg_apart:
     type: PRODUCTION
     name: Take any mob egg apart
@@ -5327,6 +5365,19 @@ recipes:
         material: RED_SANDSTONE
         amount: 1280
     factory: Sandstone Smelter
+  Upgrade_to_Slow_Stone_Smelter:
+    production_time: 10m
+    type: UPGRADE
+    name: Upgrade to Slow Stone Smelter
+    fuel_consumption_intervall: 20s
+    input:
+      sobblestone:
+        material: COBBLESTONE
+        amount: 160
+      stone:
+        material: STONE
+        amount: 160
+    factory: Slow Stone Smelter
   Upgrade_to_Soup_kitchen:
     production_time: 2h
     type: UPGRADE
