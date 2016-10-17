@@ -801,14 +801,14 @@ factories:
     name: Basic Forge
     citadelBreakReduction: 0.1
     recipes:
-     - Enchant_Efficiency_Pickaxe_Basic
-     - Enchant_Efficiency_Axe_Basic
-     - Enchant_Efficiency_Shovel_Basic
-     - Enchant_Unbreaking_Pickaxe_Basic
-     - Enchant_Unbreaking_Axe_Basic
-     - Enchant_Unbreaking_Shovel_Basic
-     - Enchant_Unbreaking_Sword_Basic
-     - Enchant_Sharpness_Basic
+     - Enchant_Axe_Efficiency_I
+     - Enchant_Pickaxe_Efficiency_I
+     - Enchant_Shovel_Efficiency_I
+     - Enchant_Sharpness_I
+     - Enchant_Axe_Unbreaking_I
+     - Enchant_Pickaxe_Unbreaking_I
+     - Enchant_Shovel_Unbreaking_I
+     - Enchant_Sword_Unbreaking_I
      - Upgrade_to_Ember_Forge
      - Upgrade_to_River_Forge
      - Upgrade_to_Magic_Forge
@@ -7340,7 +7340,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 350
+        amount: 300
   Upgrade_to_Magma_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7350,9 +7350,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 16
-        lore:
-         - Compacted Item
+        amount: 167
   Upgrade_to_River_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7362,7 +7360,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 200
   Upgrade_to_Ocean_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7372,9 +7370,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 12
-        lore:
-         - Compacted Item
+        amount: 112
   Upgrade_to_Magic_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7394,9 +7390,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 23
-        lore:
-         - Compacted Item
+        amount: 400
   Upgrade_to_Mithril_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7416,7 +7410,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 160
+        amount: 150
   Upgrade_to_Meteor_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7426,9 +7420,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 23
-        lore:
-         - Compacted Item
+        amount: 300
   Upgrade_to_Archer_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7438,7 +7430,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 450
+        amount: 300
   Upgrade_to_Marksman_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7448,7 +7440,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 144
+        amount: 100
   Upgrade_to_Sniper_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7458,9 +7450,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 21
-        lore:
-         - Compacted Item
+        amount: 200
   Upgrade_to_Dagger_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7480,7 +7470,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 160
+        amount: 150
   Upgrade_to_Blade_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7490,9 +7480,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 23
-        lore:
-         - Compacted Item
+        amount: 300
   Upgrade_to_Quick_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7502,7 +7490,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 350
+        amount: 200
   Upgrade_to_Rapid_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7522,9 +7510,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 16
-        lore:
-         - Compacted Item
+        amount: 225
   Upgrade_to_Rock_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7544,7 +7530,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 118
+        amount: 125
   Upgrade_to_Carbon_Forge:
     production_time: 1h
     type: UPGRADE
@@ -7554,9 +7540,8 @@ recipes:
     input:
       emeralds:
         material: EMERALD_BLOCK
-        amount: 18
-        lore:
-         - Compacted Item
+        amount: 250
+
 #FireProtection
 
   Enchant_Helmet_FireP_I:
@@ -7960,7 +7945,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 750
+        amount: 400
     enchant: ARROW_FIRE
     level: 1
     enchant_item:
@@ -7988,7 +7973,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 625
+        amount: 500
     enchant: FIRE_ASPECT
     level: 2
     enchant_item:
@@ -8037,7 +8022,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 250
     enchant: DEPTH_STRIDER
     level: 3
     enchant_item:
@@ -8086,7 +8071,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 300
+        amount: 200
     enchant: OXYGEN
     level: 3
     enchant_item:
@@ -8105,7 +8090,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 400
+        amount: 100
     enchant: FROST_WALKER
     level: 1
     enchant_item:
@@ -8119,7 +8104,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 200
     enchant: FROST_WALKER
     level: 2
     enchant_item:
@@ -8134,7 +8119,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 150
     enchant: WATER_WORKER
     level: 1
     enchant_item:
@@ -8196,7 +8181,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 300
     enchant: PROTECTION_FALL
     level: 4
     enchant_item:
@@ -8262,7 +8247,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 120
+        amount: 100
     enchant: DAMAGE_ARTHROPODS
     level: 4
     enchant_item:
@@ -8279,7 +8264,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 300
+        amount: 200
     enchant: DAMAGE_ARTHROPODS
     level: 5
     enchant_item:
@@ -8298,7 +8283,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 750
+        amount: 500
     enchant: ARROW_INFINITE
     level: 1
     enchant_item:
@@ -8313,7 +8298,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 300
     enchant: SILK_TOUCH
     level: 1
     enchant_item:
@@ -8326,7 +8311,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 300
     enchant: SILK_TOUCH
     level: 1
     enchant_item:
@@ -8339,7 +8324,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 300
     enchant: SILK_TOUCH
     level: 1
     enchant_item:
@@ -8542,7 +8527,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 375
+        amount: 250
     enchant: PROTECTION_ENVIRONMENTAL
     level: 4
     enchant_item:
@@ -8559,7 +8544,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 375
+        amount: 250
     enchant: PROTECTION_ENVIRONMENTAL
     level: 4
     enchant_item:
@@ -8576,7 +8561,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 375
+        amount: 250
     enchant: PROTECTION_ENVIRONMENTAL
     level: 4
     enchant_item:
@@ -8593,7 +8578,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 375
+        amount: 250
     enchant: PROTECTION_ENVIRONMENTAL
     level: 4
     enchant_item:
@@ -8900,7 +8885,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 225
+        amount: 150
     enchant: THORNS
     level: 3
     enchant_item:
@@ -8949,7 +8934,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 150
+        amount: 100
     enchant: ARROW_DAMAGE
     level: 3
     enchant_item:
@@ -8966,7 +8951,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 200
     enchant: ARROW_DAMAGE
     level: 4
     enchant_item:
@@ -8983,7 +8968,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 1000
+        amount: 400
     enchant: ARROW_DAMAGE
     level: 5
     enchant_item:
@@ -9002,7 +8987,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 5
+        amount: 25
     enchant: PROTECTION_PROJECTILE
     level: 1
     enchant_item:
@@ -9015,7 +9000,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 5
+        amount: 25
     enchant: PROTECTION_PROJECTILE
     level: 1
     enchant_item:
@@ -9028,7 +9013,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 5
+        amount: 25
     enchant: PROTECTION_PROJECTILE
     level: 1
     enchant_item:
@@ -9041,7 +9026,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 5
+        amount: 25
     enchant: PROTECTION_PROJECTILE
     level: 1
     enchant_item:
@@ -9054,7 +9039,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 15
+        amount: 50
     enchant: PROTECTION_PROJECTILE
     level: 2
     enchant_item:
@@ -9071,7 +9056,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 15
+        amount: 50
     enchant: PROTECTION_PROJECTILE
     level: 2
     enchant_item:
@@ -9088,7 +9073,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 15
+        amount: 50
     enchant: PROTECTION_PROJECTILE
     level: 2
     enchant_item:
@@ -9105,7 +9090,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 15
+        amount: 50
     enchant: PROTECTION_PROJECTILE
     level: 2
     enchant_item:
@@ -9122,7 +9107,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 50
+        amount: 100
     enchant: PROTECTION_PROJECTILE
     level: 3
     enchant_item:
@@ -9139,7 +9124,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 50
+        amount: 100
     enchant: PROTECTION_PROJECTILE
     level: 3
     enchant_item:
@@ -9156,7 +9141,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 50
+        amount: 100
     enchant: PROTECTION_PROJECTILE
     level: 3
     enchant_item:
@@ -9173,7 +9158,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 50
+        amount: 100
     enchant: PROTECTION_PROJECTILE
     level: 3
     enchant_item:
@@ -9190,7 +9175,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 125
+        amount: 200
     enchant: PROTECTION_PROJECTILE
     level: 4
     enchant_item:
@@ -9207,7 +9192,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 125
+        amount: 200
     enchant: PROTECTION_PROJECTILE
     level: 4
     enchant_item:
@@ -9224,7 +9209,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 125
+        amount: 200
     enchant: PROTECTION_PROJECTILE
     level: 4
     enchant_item:
@@ -9241,7 +9226,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 125
+        amount: 200
     enchant: PROTECTION_PROJECTILE
     level: 4
     enchant_item:
@@ -9260,7 +9245,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 150
+        amount: 75
     enchant: ARROW_KNOCKBACK
     level: 1
     enchant_item:
@@ -9273,7 +9258,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 400
+        amount: 150
     enchant: ARROW_KNOCKBACK
     level: 2
     enchant_item:
@@ -9322,7 +9307,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 150
+        amount: 125
     enchant: DAMAGE_ALL
     level: 3
     enchant_item:
@@ -9339,7 +9324,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 500
+        amount: 250
     enchant: DAMAGE_ALL
     level: 4
     enchant_item:
@@ -9356,7 +9341,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 1000
+        amount: 500
     enchant: DAMAGE_ALL
     level: 5
     enchant_item:
@@ -9405,7 +9390,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 60
+        amount: 50
     enchant: DAMAGE_UNDEAD
     level: 3
     enchant_item:
@@ -9422,7 +9407,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 120
+        amount: 100
     enchant: DAMAGE_UNDEAD
     level: 4
     enchant_item:
@@ -9439,7 +9424,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 300
+        amount: 200
     enchant: DAMAGE_UNDEAD
     level: 5
     enchant_item:
@@ -9458,7 +9443,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 150
+        amount: 100
     enchant: KNOCKBACK
     level: 1
     enchant_item:
@@ -9471,7 +9456,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 400
+        amount: 200
     enchant: KNOCKBACK
     level: 2
     enchant_item:
@@ -9491,7 +9476,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 5
+        amount: 10
     enchant: DIG_SPEED
     level: 1
     enchant_item:
@@ -9504,7 +9489,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 10
+        amount: 20
     enchant: DIG_SPEED
     level: 2
     enchant_item:
@@ -9521,7 +9506,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 30
+        amount: 40
     enchant: DIG_SPEED
     level: 3
     enchant_item:
@@ -9555,7 +9540,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 200
+        amount: 125
     enchant: DIG_SPEED
     level: 5
     enchant_item:
@@ -9572,7 +9557,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 5
+        amount: 10
     enchant: DIG_SPEED
     level: 1
     enchant_item:
@@ -9585,7 +9570,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 10
+        amount: 20
     enchant: DIG_SPEED
     level: 2
     enchant_item:
@@ -9602,7 +9587,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 30
+        amount: 40
     enchant: DIG_SPEED
     level: 3
     enchant_item:
@@ -9636,7 +9621,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 200
+        amount: 125
     enchant: DIG_SPEED
     level: 5
     enchant_item:
@@ -9653,7 +9638,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 5
+        amount: 10
     enchant: DIG_SPEED
     level: 1
     enchant_item:
@@ -9666,7 +9651,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 10
+        amount: 20
     enchant: DIG_SPEED
     level: 2
     enchant_item:
@@ -9683,7 +9668,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 30
+        amount: 40
     enchant: DIG_SPEED
     level: 3
     enchant_item:
@@ -9717,7 +9702,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 200
+        amount: 125
     enchant: DIG_SPEED
     level: 5
     enchant_item:
@@ -9749,7 +9734,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 75
+        amount: 50
     enchant: DURABILITY
     level: 2
     enchant_item:
@@ -9766,7 +9751,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 200
+        amount: 100
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -9796,7 +9781,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 75
+        amount: 50
     enchant: DURABILITY
     level: 2
     enchant_item:
@@ -9813,7 +9798,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 200
+        amount: 100
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -9843,7 +9828,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 75
+        amount: 50
     enchant: DURABILITY
     level: 2
     enchant_item:
@@ -9860,7 +9845,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 200
+        amount: 100
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -9879,7 +9864,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 38
+        amount: 50
     enchant: DURABILITY
     level: 1
     enchant_item:
@@ -9909,7 +9894,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 200
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -9928,7 +9913,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 25
+        amount: 50
     enchant: DURABILITY
     level: 1
     enchant_item:
@@ -9941,7 +9926,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 75
+        amount: 100
     enchant: DURABILITY
     level: 2
     enchant_item:
@@ -9977,7 +9962,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 38
+        amount: 50
     enchant: DURABILITY
     level: 1
     enchant_item:
@@ -9990,7 +9975,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 38
+        amount: 50
     enchant: DURABILITY
     level: 1
     enchant_item:
@@ -10003,7 +9988,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 38
+        amount: 50
     enchant: DURABILITY
     level: 1
     enchant_item:
@@ -10016,7 +10001,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 38
+        amount: 50
     enchant: DURABILITY
     level: 1
     enchant_item:
@@ -10029,7 +10014,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 38
+        amount: 50
     enchant: DURABILITY
     level: 1
     enchant_item:
@@ -10127,7 +10112,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 200
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -10144,7 +10129,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 200
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -10161,7 +10146,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 200
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -10178,7 +10163,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 200
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -10195,7 +10180,7 @@ recipes:
     input:
       emeralds:
         material: EMERALD
-        amount: 250
+        amount: 200
     enchant: DURABILITY
     level: 3
     enchant_item:
@@ -10205,112 +10190,6 @@ recipes:
           ub2:
             enchant: DURABILITY
             level: 2
-#Basic Enchantments
-
-  Enchant_Efficiency_Pickaxe_Basic:
-    type: ENCHANT
-    name: Enchant Pickaxe with Efficiency
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 10
-    enchant: DIG_SPEED
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_PICKAXE
-  Enchant_Efficiency_Axe_Basic:
-    type: ENCHANT
-    name: Enchant Axe with Efficiency
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 10
-    enchant: DIG_SPEED
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_AXE
-  Enchant_Efficiency_Shovel_Basic:
-    type: ENCHANT
-    name: Enchant Shovel with Efficiency
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 10
-    enchant: DIG_SPEED
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_SPADE
-  Enchant_Unbreaking_Pickaxe_Basic:
-    type: ENCHANT
-    name: Enchant Pickaxe with Unbreaking
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 50
-    enchant: DURABILITY
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_PICKAXE
-  Enchant_Unbreaking_Axe_Basic:
-    type: ENCHANT
-    name: Enchant Axe with Unbreaking
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 50
-    enchant: DURABILITY
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_AXE
-  Enchant_Unbreaking_Shovel_Basic:
-    type: ENCHANT
-    name: Enchant Shovel with Unbreaking
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 50
-    enchant: DURABILITY
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_SPADE
-  Enchant_Unbreaking_Sword_Basic:
-    type: ENCHANT
-    name: Enchant Sword with Unbreaking
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 50
-    enchant: DURABILITY
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_SWORD
-  Enchant_Sharpness_Basic:
-    type: ENCHANT
-    name: Enchant Sword with Sharpness
-    production_time: 15s
-    input:
-      emeralds:
-        material: EMERALD
-        amount: 50
-    enchant: DAMAGE_ALL
-    level: 1
-    enchant_item:
-      armor:
-        material: DIAMOND_SWORD
   Enchant_Leaf_Burner_I:
     type: LOREENCHANT
     name: Enchant Shear with Leaf Burner
