@@ -578,6 +578,7 @@ factories:
     - Craft_Iron_Bars
     - Craft_Iron_Door
     - Craft_Flint_and_Steel
+    - Craft_Hopper
     - Repair_Advanced_Factory
   railfactory:
     type: FCCUPGRADE
@@ -2060,6 +2061,21 @@ recipes:
       iron door:
         material: IRON_DOOR
         amount: 10
+  Craft_Hopper:
+    type: PRODUCTION
+    name: Craft Hopper
+    production_time: 5s
+    input:
+      iron ingot:
+        material: IRON_INGOT
+        amount: 128
+      chest:
+        material: CHEST
+        amount: 1
+    output:
+      hopper:
+        material: HOPPER
+        amount: 1
   Craft_Jukeboxes:
     type: PRODUCTION
     name: Craft Jukeboxes
